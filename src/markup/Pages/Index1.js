@@ -9,6 +9,7 @@ import GallerySlider from "../Element/GallerySlider";
 import Curriculum from "../Element/Curriculum";
 import InstagramFeed from "../Element/InstagramFeed";
 import SEO from "../../components/SEO";
+import largeimg from "./../../images/blog/large/Curriculum.jpg";
 import {
   OrganizationSchema,
   LocalBusinessSchema,
@@ -88,69 +89,650 @@ class Index1 extends Component {
           {/* Slider Banner */}
           <BannerSlider />
           {/* Slider Banner */}
+          <div className="section-full bg-white content-inner-2" style={{ position: "relative", overflow: "hidden" }}>
+  {/* Decorative Background Elements */}
+  <div style={{
+    position: "absolute",
+    top: "-50px",
+    right: "-50px",
+    width: "300px",
+    height: "300px",
+    borderRadius: "50%",
+    background: "linear-gradient(135deg, #b8d88e 0%, #a5c9f1 100%)",
+    opacity: "0.1",
+    zIndex: "0"
+  }}></div>
+  <div style={{
+    position: "absolute",
+    bottom: "-80px",
+    left: "-80px",
+    width: "400px",
+    height: "400px",
+    borderRadius: "50%",
+    background: "linear-gradient(135deg, #ffc570 0%, #f5a5b8 100%)",
+    opacity: "0.1",
+    zIndex: "0"
+  }}></div>
+
+  <div className="container" style={{ position: "relative", zIndex: "1" }}>
+    {/* Promise Section */}
+    <div className="row justify-content-center m-b50">
+      <div className="col-lg-10">
+        <div 
+          className="text-center"
+          style={{
+            background: "linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)",
+            padding: "50px 40px",
+            borderRadius: "20px",
+            boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
+            border: "2px solid #48af53",
+            position: "relative",
+            animation: "fadeInUp 1s ease-out"
+          }}
+        >
+          <div style={{
+            position: "absolute",
+            top: "-15px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            background: "#48af53",
+            color: "white",
+            padding: "8px 30px",
+            borderRadius: "20px",
+            fontSize: "14px",
+            fontWeight: "600",
+            letterSpacing: "1px"
+          }}>
+            OUR PROMISE
+          </div>
+          
+          <h2 
+            className="head-title" 
+            style={{ 
+              color: "#48af53", 
+              marginTop: "20px",
+              marginBottom: "20px",
+              fontSize: "32px",
+              fontWeight: "700",
+              lineHeight: "1.4"
+            }}
+          >
+            Paper Bird Promise
+          </h2>
+          <p style={{ 
+            fontSize: "18px", 
+            lineHeight: "1.8", 
+            color: "#555",
+            maxWidth: "800px",
+            margin: "0 auto",
+            fontWeight: "400"
+          }}>
+            A place where children grow with confidence, compassion, and curiosity at their own pace, in their own way.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* USP Section */}
+    <div className="row justify-content-center">
+      <div className="col-lg-12">
+        <div className="text-center m-b40">
+          <h3 
+            className="head-title" 
+            style={{ 
+              color: "#48af53",
+              fontSize: "28px",
+              fontWeight: "700",
+              marginBottom: "15px"
+            }}
+          >
+            Early Bird Special Offer
+          </h3>
+          <p style={{ color: "#666", fontSize: "16px" }}>
+            Limited to the first 32 admissions only!
+          </p>
+        </div>
+
+        <div className="row justify-content-center">
+          {/* Offer Card 1 - Free Transport */}
+          <div className="col-lg-4 col-md-6 m-b30">
+            <div 
+              className="offer-card"
+              style={{
+                background: "white",
+                padding: "40px 30px",
+                borderRadius: "16px",
+                boxShadow: "0 8px 30px rgba(0,0,0,0.1)",
+                border: "3px solid #b8d88e",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+                position: "relative",
+                overflow: "hidden",
+                minHeight: "280px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.1)";
+              }}
+            >
+              <div style={{
+                position: "absolute",
+                top: "-10px",
+                right: "-10px",
+                background: "#b8d88e",
+                color: "white",
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "24px",
+                fontWeight: "bold",
+                boxShadow: "0 4px 15px rgba(184,216,142,0.4)"
+              }}>
+                1
+              </div>
+              
+              <div className="icon-lg m-b20">
+                <i className="flaticon-location" style={{ fontSize: "60px", color: "#b8d88e" }}></i>
+              </div>
+              <h4 style={{ 
+                color: "#48af53", 
+                marginBottom: "15px",
+                fontSize: "22px",
+                fontWeight: "600"
+              }}>
+                Free Transport for First Year
+              </h4>
+              <p style={{ 
+                color: "#666", 
+                fontSize: "15px",
+                lineHeight: "1.6",
+                margin: "0"
+              }}>
+                Safe and reliable transportation at no cost for your child's entire first year.
+              </p>
+            </div>
+          </div>
+
+          {/* Offer Card 2 - Summer Camp */}
+          <div className="col-lg-4 col-md-6 m-b30">
+            <div 
+              className="offer-card"
+              style={{
+                background: "white",
+                padding: "40px 30px",
+                borderRadius: "16px",
+                boxShadow: "0 8px 30px rgba(0,0,0,0.1)",
+                border: "3px solid #ffc570",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+                position: "relative",
+                overflow: "hidden",
+                minHeight: "280px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.1)";
+              }}
+            >
+              <div style={{
+                position: "absolute",
+                top: "-10px",
+                right: "-10px",
+                background: "#ffc570",
+                color: "white",
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "24px",
+                fontWeight: "bold",
+                boxShadow: "0 4px 15px rgba(255,197,112,0.4)"
+              }}>
+                2
+              </div>
+              
+              <div className="icon-lg m-b20">
+                <i className="flaticon-trophy" style={{ fontSize: "60px", color: "#ffc570" }}></i>
+              </div>
+              <h4 style={{ 
+                color: "#48af53", 
+                marginBottom: "15px",
+                fontSize: "22px",
+                fontWeight: "600"
+              }}>
+                Complimentary Summer Camp
+              </h4>
+              <p style={{ 
+                color: "#666", 
+                fontSize: "15px",
+                lineHeight: "1.6",
+                margin: "0"
+              }}>
+                Engaging summer activities and learning experiences included at absolutely no extra charge.
+              </p>
+            </div>
+          </div>
+
+          {/* Offer Card 3 - Early Bird */}
+          <div className="col-lg-4 col-md-6 m-b30">
+            <div 
+              className="offer-card"
+              style={{
+                background: "white",
+                padding: "40px 30px",
+                borderRadius: "16px",
+                boxShadow: "0 8px 30px rgba(0,0,0,0.1)",
+                border: "3px solid #f5a5b8",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+                position: "relative",
+                overflow: "hidden",
+                minHeight: "280px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.boxShadow = "0 15px 40px rgba(0,0,0,0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.1)";
+              }}
+            >
+              <div style={{
+                position: "absolute",
+                top: "-10px",
+                right: "-10px",
+                background: "#f5a5b8",
+                color: "white",
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "24px",
+                fontWeight: "bold",
+                boxShadow: "0 4px 15px rgba(245,165,184,0.4)"
+              }}>
+                3
+              </div>
+              
+              <div className="icon-lg m-b20">
+                <i className="flaticon-abc-block" style={{ fontSize: "60px", color: "#f5a5b8" }}></i>
+              </div>
+              <h4 style={{ 
+                color: "#48af53", 
+                marginBottom: "15px",
+                fontSize: "22px",
+                fontWeight: "600"
+              }}>
+                Exclusive Early Bird Benefits
+              </h4>
+              <p style={{ 
+                color: "#666", 
+                fontSize: "15px",
+                lineHeight: "1.6",
+                margin: "0"
+              }}>
+                Special privileges and perks reserved exclusively for our first 32 families.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center m-t40">
+          <div style={{
+            background: "linear-gradient(135deg, #48af53 0%, #3a8f42 100%)",
+            display: "inline-block",
+            padding: "15px 40px",
+            borderRadius: "50px",
+            boxShadow: "0 8px 25px rgba(72,175,83,0.3)",
+            animation: "pulse 2s infinite"
+          }}>
+            <p style={{ 
+              color: "white", 
+              margin: "0",
+              fontSize: "18px",
+              fontWeight: "600",
+              letterSpacing: "0.5px"
+            }}>
+              <i className="fa fa-clock-o" style={{ marginRight: "10px" }}></i>
+              Only <span style={{ 
+                fontSize: "24px", 
+                fontWeight: "700",
+                padding: "0 8px"
+              }}>32</span> Spots Available!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style jsx>{`
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    @media (max-width: 991px) {
+      .offer-card {
+        margin-bottom: 20px;
+      }
+    }
+  `}</style>
+</div>
           <div className="content-block">
             {/*  Hero Section with Local SEO */}
-            <div className="section-full bg-white content-inner-1 text-center">
-              <div className="container">
-                <div className="section-head">
-                  <h1
-                    className="head-title text-secondry"
-                    style={{
-                      color: "#48af53",
-                      fontSize: "38px",
-                      marginBottom: "15px",
-                      lineHeight: "1.3",
-                    }}
-                  >
-                    Best Montessori Preschool & Daycare in Indiranagar, Bengaluru
-                  </h1>
-                  <p
-                    style={{
-                      fontSize: "20px",
-                      marginBottom: "10px",
-                      fontWeight: "500",
-                    }}
-                  >
-                    Welcome to Paper Bird Shishukul - Where little hands create
-                    big dreams!
-                  </p>
-                  <p style={{ fontSize: "16px", color: "#666", marginBottom: "5px" }}>
-                    📍 Located at 1321, Paramahansa Yogananda Road, Eshwara
-                    Layout, Indiranagar
-                  </p>
-                  <p style={{ fontSize: "16px", color: "#666", marginBottom: "5px" }}>
-                    🏆 Serving families in Bengaluru since 2017 | Montessori
-                    Certified Teachers
-                  </p>
-                  <p style={{ fontSize: "18px", color: "#48af53", fontWeight: "600" }}>
-                    📞 Call for Admission: <a href="tel:+919741563692" style={{ color: "#48af53" }}>097415 63692</a>
-                  </p>
-                </div>
-                <div className="row">
-                  {iconBlog.map((data, index) => (
-                    <div
-                      className="col-lg-3 col-md-6 col-sm-6 col-12"
-                      key={index}
-                    >
-                      <div className="icon-bx-wraper sr-iconbox m-b20">
-                        <div className="icon-lg m-b20">
-                          <Link to={"#"} className="icon-cell">
-                            <img src={data.image} alt={data.alt} />
-                          </Link>
-                        </div>
-                        <div className="icon-content">
-                          <h3 className="dlab-tilte" style={{ fontSize: "18px" }}>
-                            {data.title1}
-                            <br />
-                            {data.title2}
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+      <div className="section-full bg-white content-inner-1">
+  <div className="container">
+    <div className="section-head text-center">
+      <h1
+        className="head-title"
+        style={{
+          color: "#48af53",
+          fontSize: "38px",
+          marginBottom: "15px",
+          lineHeight: "1.3",
+        }}
+      >
+        Best Montessori Preschool & Daycare in Bengaluru
+      </h1>
+      <p
+        style={{
+          fontSize: "20px",
+          marginBottom: "25px",
+          fontWeight: "500",
+          color: "#333",
+        }}
+      >
+        Welcome to Paper Bird Shishukul - Where little hands create big dreams!
+      </p>
+    </div>
+
+
+    {/* Branches Section */}
+    <div className="row justify-content-center mb-5">
+      {/* Indiranagar Branch Card */}
+      <div className="col-lg-5 col-md-6 col-sm-12 m-b30">
+        <div 
+          className="branch-card" 
+          style={{
+            border: "2px solid #48af53",
+            borderRadius: "15px",
+            padding: "30px",
+            height: "100%",
+            boxShadow: "0 5px 15px rgba(72, 175, 83, 0.1)",
+            transition: "transform 0.3s ease"
+          }}
+          onMouseOver="this.style.transform='translateY(-5px)'"
+          onMouseOut="this.style.transform='translateY(0)'"
+          itemScope
+          itemType="https://schema.org/ChildCare"
+        >
+          <meta itemProp="name" content="Paper Bird Shishukul - Indiranagar" />
+          <meta itemProp="address" content="1321, Paramahansa Yogananda Road, Eshwara Layout, Indiranagar, Bengaluru" />
+          <div className="branch-badge" style={{
+            backgroundColor: "#48af53",
+            color: "white",
+            padding: "5px 15px",
+            borderRadius: "20px",
+            display: "inline-block",
+            marginBottom: "20px",
+            fontSize: "14px",
+            fontWeight: "600"
+          }}>
+            Flagship Branch
+          </div>
+          <h2 className="head-title text-secondry"
+            style={{
+              color: "#48af53",
+              fontSize: "26px",
+              marginBottom: "15px",
+              fontWeight: "700"
+            }}
+         
+          >
+            Indiranagar Branch
+          </h2>
+          <div className="branch-details">
+            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
+              <span style={{ marginRight: "10px", minWidth: "24px" }}>📍</span>
+              <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <span itemProp="streetAddress">1321, Paramahansa Yogananda Road</span>, 
+                <span itemProp="addressLocality"> Eshwara Layout, Indiranagar</span>, 
+                <span itemProp="addressRegion"> Bengaluru</span>
+              </span>
+            </p>
+            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
+              <span style={{ marginRight: "10px", minWidth: "24px" }}>🏆</span>
+              <span>Serving families in Bengaluru since 2017 | Montessori Certified Teachers</span>
+            </p>
+            <div 
+              className="branch-contact" 
+              style={{ 
+                backgroundColor: "#f9f9f9", 
+                padding: "15px", 
+                borderRadius: "10px",
+                marginTop: "20px"
+              }}
+              itemProp="contactPoint"
+              itemScope
+              itemType="https://schema.org/ContactPoint"
+            >
+              <p style={{ fontSize: "18px", color: "#48af53", fontWeight: "600", margin: 0 }}>
+                <meta itemProp="contactType" content="Admission Inquiry" />
+                <meta itemProp="telephone" content="+919741563692" />
+                <span style={{ marginRight: "10px" }}>📞</span>
+                Call for Admission: <a 
+                  href="tel:+919741563692" 
+                  style={{ color: "#48af53", textDecoration: "none", fontWeight: "700" }}
+                  aria-label="Call Indiranagar branch at 097415 63692"
+                >
+                  097415 63692
+                </a>
+              </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Whitefield Branch Card */}
+      <div className="col-lg-5 col-md-6 col-sm-12 m-b30">
+        <div 
+          className="branch-card" 
+          style={{
+            border: "2px solid #48af53",
+            borderRadius: "15px",
+            padding: "30px",
+            height: "100%",
+            boxShadow: "0 5px 15px rgba(72, 175, 83, 0.1)",
+            transition: "transform 0.3s ease"
+          }}
+          onMouseOver="this.style.transform='translateY(-5px)'"
+          onMouseOut="this.style.transform='translateY(0)'"
+          itemScope
+          itemType="https://schema.org/ChildCare"
+        >
+          <meta itemProp="name" content="Paper Bird Shishukul - Whitefield" />
+          <meta itemProp="address" content="Whitefield, Bengaluru, Karnataka" />
+          <div className="branch-badge" style={{
+            backgroundColor: "#48af53",
+            color: "white",
+            padding: "5px 15px",
+            borderRadius: "20px",
+            display: "inline-block",
+            marginBottom: "20px",
+            fontSize: "14px",
+            fontWeight: "600"
+          }}>
+            New Branch
+          </div>
+          <h2 
+            style={{
+              color: "#48af53",
+              fontSize: "26px",
+              marginBottom: "15px",
+              fontWeight: "700"
+            }}
+            itemProp="branchOf"
+          >
+            Whitefield Branch
+          </h2>
+          <div className="branch-details">
+            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
+              <span style={{ marginRight: "10px", minWidth: "24px" }}>📍</span>
+              <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <span itemProp="addressLocality">Whitefield</span>, 
+                <span itemProp="addressRegion"> Bengaluru</span>, 
+                <span itemProp="addressCountry"> Karnataka</span>
+              </span>
+            </p>
+            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
+              <span style={{ marginRight: "10px", minWidth: "24px" }}>🏆</span>
+              <span>New Premium Campus | Same Montessori Excellence | Enrolling Now</span>
+            </p>
+            <div 
+              className="branch-contact" 
+              style={{ 
+                backgroundColor: "#f9f9f9", 
+                padding: "15px", 
+                borderRadius: "10px",
+                marginTop: "20px"
+              }}
+              itemProp="contactPoint"
+              itemScope
+              itemType="https://schema.org/ContactPoint"
+            >
+              <p style={{ fontSize: "18px", color: "#48af53", fontWeight: "600", margin: 0 }}>
+                <meta itemProp="contactType" content="Admission Inquiry" />
+                <meta itemProp="telephone" content="+919741563692" />
+                <span style={{ marginRight: "10px" }}>📞</span>
+                Call for Admission: <a 
+                  href="tel:+919741563692" 
+                  style={{ color: "#48af53", textDecoration: "none", fontWeight: "700" }}
+                  aria-label="Call Whitefield branch at 097415 63692"
+                >
+                  097415 63692
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Features Section */}
+    <div className="section-subhead text-center mb-4">
+      <h2 style={{ color: "#333", fontSize: "28px", fontWeight: "600" }}>
+        Why Parents Choose Paper Bird Shishukul
+      </h2>
+    </div>
+    
+    <div className="row">
+      {iconBlog.map((data, index) => (
+        <div
+          className="col-lg-3 col-md-6 col-sm-6 col-12"
+          key={index}
+        >
+          <div className="icon-bx-wraper sr-iconbox m-b20">
+            <div className="icon-lg m-b20">
+              <Link to={"#"} className="icon-cell">
+                <img 
+                  src={data.image} 
+                  alt={data.alt} 
+                  loading="lazy"
+                  width="60"
+                  height="60"
+                />
+              </Link>
+            </div>
+            <div className="icon-content">
+              <h3 
+                className="dlab-tilte" 
+                style={{ 
+                  fontSize: "18px", 
+                  color: "#333",
+                  fontWeight: "600",
+                  lineHeight: "1.4"
+                }}
+              >
+                {data.title1}
+                <br />
+                {data.title2}
+              </h3>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* CTA Section */}
+    <div className="text-center mt-5">
+      <p style={{ fontSize: "20px", color: "#333", marginBottom: "20px", fontWeight: "500" }}>
+        Book a Campus Tour Today!
+      </p>
+      <a 
+        href="tel:+919741563692"
+        className="btn"
+        style={{
+          backgroundColor: "#48af53",
+          color: "white",
+          padding: "12px 30px",
+          borderRadius: "30px",
+          fontWeight: "600",
+          fontSize: "18px",
+          textDecoration: "none",
+          display: "inline-block",
+          transition: "all 0.3s ease"
+        }}
+        onMouseOver="this.style.backgroundColor='#3d9646'; this.style.transform='scale(1.05)'"
+        onMouseOut="this.style.backgroundColor='#48af53'; this.style.transform='scale(1)'"
+        aria-label="Call for admission inquiry"
+      >
+        📞 Call Now: 097415 63692
+      </a>
+    </div>
+  </div>
+</div>
             {/*  About Us End*/}
             <div
               className="section-full bg-white content-inner-2 about-box"
@@ -161,138 +743,237 @@ class Index1 extends Component {
                 backgroundPosition: "center",
               }}
             >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-md-12 col-sm-12 col-12">
-                    <div className="section-head">
-                      <h2
-                        className="head-title text-secondry"
-                        style={{ color: "#48af53" }}
-                      >
-                        Our Vision and Mission - Montessori Education in
-                        Indiranagar
-                        <br />
-                      </h2>
-                      <p style={{ textAlign: "justify" }}>
-                        At Paper Bird Shishukul, Indiranagar's trusted
-                        Montessori preschool, we are dedicated to providing
-                        high-quality holistic education that goes beyond
-                        textbooks and classrooms. Our mission is to create a
-                        vibrant learning environment where children in Bengaluru
-                        can blossom intellectually, emotionally, socially,
-                        physically, and creatively. We believe in fostering a
-                        love for learning, encouraging curiosity, and nurturing
-                        the unique talents of every child.
-                      </p>
-                      <p></p>
-                      <p style={{ textAlign: "justify" }}>
-                        Our vision extends beyond the confines of traditional
-                        education. As one of the leading preschools in
-                        Indiranagar, we aspire to invoke in our students a
-                        genuine love for learning – a love that will accompany
-                        them throughout their lives. By instilling a sense of
-                        curiosity, resilience, and empathy, we prepare our
-                        students to face the challenges of the ever-changing
-                        world with confidence and grace.
-                      </p>
-                    </div>
-                  </div>
+              <div className="container my-5">
 
-                  <div className="col-lg-5 col-md-12 col-sm-12 col-12">
-                    {iconBlog2.map((item, index) => (
-                      <div className="icon-bx-wraper left" key={index}>
-                        <div className="icon-lg m-b20">
-                          {" "}
-                          <span className="icon-cell">{item.icon}</span>{" "}
-                        </div>
-                        <div className="icon-content">
-                          <h3 className="dlab-tilte" style={{ fontSize: "20px" }}>
-                            {item.title}
-                          </h3>
-                          <p>{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <Curriculum />
-                </div>
-              </div>
+  {/* ===== TOP SECTION (Text + Image) ===== */}
+  <div className="row align-items-center g-5">
+
+    {/* LEFT — TEXT */}
+    <div className="col-lg-7 col-md-12">
+      <div className="section-head pe-lg-4">
+
+        <h2
+          className="head-title text-secondry mb-4"
+          style={{ color: "#48af53" }}
+        >
+          Our Vision and Mission at Paper Bird Shishukul
+          <br />
+        </h2>
+
+        <p style={{ textAlign: "justify" }}>
+          At Paper Bird Shishukul, Indiranagar's trusted Montessori preschool,
+          we are dedicated to providing high-quality holistic education that
+          goes beyond textbooks and classrooms. Our mission is to create a
+          vibrant learning environment where children in Bengaluru can blossom
+          intellectually, emotionally, socially, physically, and creatively.
+          We believe in fostering a love for learning, encouraging curiosity,
+          and nurturing the unique talents of every child.
+        </p>
+
+        <p></p>
+
+        <p style={{ textAlign: "justify" }}>
+          Our vision extends beyond the confines of traditional education. As
+          one of the leading preschools in Indiranagar, we aspire to invoke in
+          our students a genuine love for learning – a love that will accompany
+          them throughout their lives. By instilling a sense of curiosity,
+          resilience, and empathy, we prepare our students to face the
+          challenges of the ever-changing world with confidence and grace.
+        </p>
+
+      </div>
+    </div>
+
+    {/* RIGHT — IMAGE */}
+    <div className="col-lg-5 col-md-12 text-center">
+      <img
+        src={largeimg}   // replace with your image path
+        alt="Paper Bird Shishukul Classroom"
+        className="img-fluid rounded-4 shadow-lg"
+        style={{
+          // maxWidth: "765px",
+          width: "100%",
+          height: "auto",
+          objectFit: "cover",
+          minHeight: "500px",
+         
+        }}
+      />
+    </div>
+
+  </div>
+
+
+  {/* ===== FEATURES SECTION (4 CARDS) ===== */}
+  <div className="row mt-5 g-4">
+
+    {iconBlog2.map((item, index) => (
+      <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+
+        <div
+          className="h-100 p-4 text-center rounded-4 shadow-sm feature-card"
+          style={{
+            background: "#ffffff",
+            transition: "all 0.3s ease",
+            border: "1px solid #f1f1f1"
+          }}
+        >
+          <div className="icon-lg mb-3" style={{ color: "#48af53" }}>
+            {item.icon}
+          </div>
+
+          <h3
+            className="dlab-tilte mb-2"
+            style={{ fontSize: "18px", fontWeight: "600" }}
+          >
+            {item.title}
+          </h3>
+
+          <p style={{ fontSize: "14px" }}>
+            {item.desc}
+          </p>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+
+  {/* ===== CURRICULUM BELOW ===== */}
+  <div className="mt-5">
+    <Curriculum />
+  </div>
+
+</div>
+
             </div>
 
             {/* Local SEO Section */}
             <div className="section-full bg-gray content-inner-1">
-              <div className="container">
-                <div className="section-head text-center">
-                  <h2
-                    className="head-title text-secondry"
-                    style={{ color: "#48af53" }}
-                  >
-                    Why Choose Paper Bird Shishukul in Indiranagar?
-                  </h2>
-                  <p style={{ maxWidth: "900px", margin: "0 auto" }}>
-                    As the premier Montessori preschool in Indiranagar,
-                    Bengaluru, we offer a unique blend of authentic Montessori
-                    education, modern facilities, and a nurturing environment.
-                    Conveniently located on Paramahansa Yogananda Road, we serve
-                    families across Indiranagar, Domlur, Koramangala, and
-                    surrounding areas in Bengaluru.
-                  </p>
-                </div>
-                <div className="row m-t30">
-                  <div className="col-lg-4 col-md-6 m-b30">
-                    <div className="icon-bx-wraper center bg-white p-a30" style={{ minHeight: "250px" }}>
-                      <div className="icon-lg m-b20">
-                        <i className="flaticon-abc-block text-blue" style={{ fontSize: "50px" }}></i>
-                      </div>
-                      <div className="icon-content">
-                        <h4 className="dlab-tilte" style={{ color: "#48af53" }}>
-                          Montessori Certified Teachers
-                        </h4>
-                        <p>
-                          All our teachers are Montessori certified (IMTC/IMI/AMS)
-                          with extensive experience in early childhood education
-                          in Bengaluru.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-6 m-b30">
-                    <div className="icon-bx-wraper center bg-white p-a30" style={{ minHeight: "250px" }}>
-                      <div className="icon-lg m-b20">
-                        <i className="flaticon-location text-green" style={{ fontSize: "50px" }}></i>
-                      </div>
-                      <div className="icon-content">
-                        <h4 className="dlab-tilte" style={{ color: "#48af53" }}>
-                          Prime Location in Indiranagar
-                        </h4>
-                        <p>
-                          Easily accessible from Indiranagar, Domlur, Koramangala,
-                          and HAL areas. Safe transport available across Bengaluru.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-6 m-b30">
-                    <div className="icon-bx-wraper center bg-white p-a30" style={{ minHeight: "250px" }}>
-                      <div className="icon-lg m-b20">
-                        <i className="flaticon-trophy text-orange" style={{ fontSize: "50px" }}></i>
-                      </div>
-                      <div className="icon-content">
-                        <h4 className="dlab-tilte" style={{ color: "#48af53" }}>
-                          Trusted Since 2017
-                        </h4>
-                        <p>
-                          Over 7 years of excellence in Montessori education,
-                          serving hundreds of families in Bengaluru with proven
-                          results.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div className="container">
+    <div className="section-head text-center">
+      <h2
+        className="head-title text-secondry"
+        style={{ color: "#48af53" }}
+      >
+        Why Choose Paper Bird Shishukul ?
+      </h2>
+      <p style={{ maxWidth: "900px", margin: "0 auto" }}>
+        At Paper Bird, childhood is respected, emotions are honoured, and learning unfolds naturally.
+      </p>
+    </div>
+    <div className="row m-t30">
+      {/* Card 1 - Child-Friendly Environment */}
+      <div className="col-lg-3 col-md-6 m-b30">
+        <div 
+          className="icon-bx-wraper center bg-white p-a30 h-100"
+          style={{
+            minHeight: "320px",
+            borderRadius: "12px",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+            border: "3px solid #b8d88e",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <div className="icon-lg m-b20">
+            <i className="flaticon-trophy" style={{ fontSize: "50px", color: "#b8d88e" }}></i>
+          </div>
+          <div className="icon-content" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <h4 className="dlab-tilte" style={{ color: "#48af53", marginBottom: "15px" }}>
+              Child-Friendly Environment
+            </h4>
+            <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+              A warm, safe, and thoughtfully prepared space where children feel secure, valued, and confident to explore.
+            </p>
+          </div>
+        </div>
+      </div>
 
+      {/* Card 2 - Strong Parent-School Partnership */}
+      <div className="col-lg-3 col-md-6 m-b30">
+        <div 
+          className="icon-bx-wraper center bg-white p-a30 h-100"
+          style={{
+            minHeight: "320px",
+            borderRadius: "12px",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+            border: "3px solid #ffc570",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <div className="icon-lg m-b20">
+            <i className="flaticon-location" style={{ fontSize: "50px", color: "#ffc570" }}></i>
+          </div>
+          <div className="icon-content" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <h4 className="dlab-tilte" style={{ color: "#48af53", marginBottom: "15px" }}>
+              Strong Parent–School Partnership
+            </h4>
+            <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+              We believe child development thrives when parents and educators work together with shared understanding and responsibility.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 3 - Customized Learning */}
+      <div className="col-lg-3 col-md-6 m-b30">
+        <div 
+          className="icon-bx-wraper center bg-white p-a30 h-100"
+          style={{
+            minHeight: "320px",
+            borderRadius: "12px",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+            border: "3px solid #f5a5b8",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <div className="icon-lg m-b20">
+            <i className="flaticon-abc-block" style={{ fontSize: "50px", color: "#f5a5b8" }}></i>
+          </div>
+          <div className="icon-content" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <h4 className="dlab-tilte" style={{ color: "#48af53", marginBottom: "15px" }}>
+              Customized Learning for Every Child
+            </h4>
+            <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+              Each child follows an individualized learning journey, progressing at their own pace with the space to grow independently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Card 4 - Emotional Wellbeing */}
+      <div className="col-lg-3 col-md-6 m-b30">
+        <div 
+          className="icon-bx-wraper center bg-white p-a30 h-100"
+          style={{
+            minHeight: "320px",
+            borderRadius: "12px",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+            border: "3px solid #a5c9f1",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <div className="icon-lg m-b20">
+            <i className="flaticon-trophy" style={{ fontSize: "50px", color: "#a5c9f1" }}></i>
+          </div>
+          <div className="icon-content" style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            <h4 className="dlab-tilte" style={{ color: "#48af53", marginBottom: "15px" }}>
+              Emotional Wellbeing at the Core
+            </h4>
+            <p style={{ fontSize: "14px", lineHeight: "1.6" }}>
+              Emotional intelligence is our primary focus. Every emotion is acknowledged, respected, and gently guided.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
             {/* Instagram Feed Section */}
             <InstagramFeed />
 

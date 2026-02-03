@@ -112,6 +112,109 @@ function EducationBanner() {
   );
 }
 
+function FounderNote() {
+  return (
+    <>
+      <div className="section-full bg-white content-inner-2">
+        <div className="container">
+          {/* Section Header */}
+          <div className="section-head text-center m-b50">
+            <h2
+              className="head-title text-secondry"
+              style={{ color: "#48af53" }}
+            >
+              Note from Founder
+            </h2>
+          </div>
+
+          {/* Founder's Message */}
+          <div className="row justify-content-center">
+            <div className="col-lg-11 col-md-12">
+              <div
+                style={{
+                  background: "#ffffff",
+                  padding: "50px",
+                  borderRadius: "16px",
+                  boxShadow: "0 8px 30px rgba(0,0,0,0.1)",
+                  border: "3px solid #48af53",
+                }}
+              >
+                <div className="row">
+                  <div className="col-12">
+                    <p style={{ 
+                      fontSize: "16px", 
+                      lineHeight: "1.8", 
+                      color: "#666",
+                      marginBottom: "20px",
+                      textAlign: "justify"
+                    }}>
+                      For more than a decade, I have been a part of the education system, and my journey into early childhood education began with a deep love for children and a desire to create something meaningful for them. When I envisioned this preschool, I wanted it to feel like a second home—safe, warm, and emotionally comforting—where every child is supported, understood, and free to grow at their own pace.
+                    </p>
+
+                    <p style={{ 
+                      fontSize: "16px", 
+                      lineHeight: "1.8", 
+                      color: "#666",
+                      marginBottom: "20px",
+                      textAlign: "justify"
+                    }}>
+                      Over the years, I have had the privilege of guiding more than 590 families, standing beside parents through every stage of their child's early development. This experience has strengthened my belief that the foundation we lay in these tender years shapes a child's confidence, curiosity, and overall well-being.
+                    </p>
+
+                    <p style={{ 
+                      fontSize: "16px", 
+                      lineHeight: "1.8", 
+                      color: "#666",
+                      marginBottom: "20px",
+                      textAlign: "justify"
+                    }}>
+                      I have poured my heart and soul into building a preschool environment that celebrates each child's individuality and nurtures their natural desire to explore. My deep admiration for Dr. Maria Montessori's philosophy continues to guide our approach, ensuring that every child experiences the joy of self-directed learning, independence, and discovery.
+                    </p>
+
+                    <p style={{ 
+                      fontSize: "16px", 
+                      lineHeight: "1.8", 
+                      color: "#666",
+                      marginBottom: "35px",
+                      textAlign: "justify"
+                    }}>
+                      It is my commitment to create a space where children feel loved, protected, and inspired every single day. Thank you for trusting us with the most precious part of your lives.
+                    </p>
+
+                    {/* Founder Signature */}
+                    <div style={{ 
+                      borderTop: "2px solid #f0f0f0",
+                      paddingTop: "25px",
+                      textAlign: "right"
+                    }}>
+                      <p style={{ 
+                        fontSize: "20px", 
+                        fontWeight: "700",
+                        color: "#48af53",
+                        marginBottom: "5px",
+                        fontStyle: "italic"
+                      }}>
+                        — Malini Selvarajan
+                      </p>
+                      <p style={{ 
+                        fontSize: "16px", 
+                        color: "#999",
+                        margin: "0"
+                      }}>
+                        Founder & Chairperson
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 class AboutUs1 extends Component {
   componentDidMount() {
     var splitBox = document.querySelectorAll(".split-box");
@@ -154,7 +257,7 @@ class AboutUs1 extends Component {
                         Selvarajan, Paper Bird Shishukul is a cherished
                         institution that has been nurturing young minds with
                         care, creativity, and innovation in the heart of
-                        Indiranagar, Bangalore.
+                        Indiranagar, Bangalore.
                       </p>
                       <p>
                         Under the guidance of our dedicated team of educators
@@ -163,7 +266,7 @@ class AboutUs1 extends Component {
                         but also on the development of creative and social
                         skills. We understand the importance of a well-rounded
                         education, and our programs are designed to provide
-                        students with diverse opportunities to explore and grow.
+                        students with diverse opportunities to explore and grow.
                       </p>
                       <h2
                         className="head-title text-secondry"
@@ -183,11 +286,9 @@ class AboutUs1 extends Component {
                         Come and experience the Paper Bird Shishukul difference
                         – where education is not just a process, but a lifelong
                         adventure filled with curiosity, creativity, and
-                        endless possibilities.
+                        endless possibilities.
                       </p>
                     </div>
-
-                    {/* <AccordionBlog /> */}
                   </div>
                   <div className="col-lg-6 col-md-12 col-sm-12 teacher-content">
                     <div className="split-box">
@@ -199,6 +300,10 @@ class AboutUs1 extends Component {
                 </div>
               </div>
             </div>
+
+            {/* Founder Note Section */}
+            <FounderNote />
+
             <div
               className="section-full bg-white content-inner-2 about-content bg-img-fix"
               style={{ backgroundImage: "url(" + bnr2 + ")" }}
@@ -206,7 +311,7 @@ class AboutUs1 extends Component {
               <BackgroundBlog />
             </div>
             {/*  Portfolio  */}
-            <div className="section-full content-inner">
+            {/* <div className="section-full content-inner">
               <div className="container">
                 <div className="section-head text-center">
                   <h2
@@ -253,17 +358,8 @@ class AboutUs1 extends Component {
                   </SRLWrapper>
                 </SimpleReactLightbox>
               </div>
-            </div>
+            </div> */}
             <EducationBanner />
-            {/* <div className="section-full bg-white content-inner-2" style={{backgroundImage:"url(" + bnr4 +")", backgroundSize:"contain",backgroundRepeat: "no-repeat", backgroundPosition: "center"}}>
-							<div className="container">
-								<div className="section-head text-center">
-									<h2 className="head-title text-secondry">Testimonials about center</h2>
-									<p>We have an excellent teacher to child ratio at our Kindergarten to ensure that each child receives the attention he or she needs</p>
-								</div>
-								<TestiMonialSlider />
-							</div>
-						</div> */}
           </div>
         </div>
         <Footer />

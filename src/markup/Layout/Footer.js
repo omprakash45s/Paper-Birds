@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { Link } from "react-router-dom";
-import logo from "./../../images/logo.png";
+import logo from "./../../images/newlogo.png";
 import Blog1 from "./../../images/blog/recent-blog/pic1.jpg";
 import Blog2 from "./../../images/blog/recent-blog/pic2.jpg";
 
@@ -14,9 +14,9 @@ class Footer extends Component {
               <div className="row">
                 <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 footer-col-4">
                   <div className="widget widget_ftabout">
-                    <div className="footer-logo">
+                    <div className="footer-logo" style={{ maxWidth: '200px', marginBottom: '15px' }}>
                       <Link to={"./"}>
-                        <img src={logo} alt="" />
+                        <img src={logo} alt="" style={{ width: '100%', height: 'auto' }} />
                       </Link>
                     </div>
                     <p>
@@ -120,7 +120,7 @@ class Footer extends Component {
                 <div className="col-lg-6 col-md-8 col-sm-6 text-left ">
                   {" "}
                   <span>
-                    Copyright © 2024 Paper Bird Shishukul. All right reserved
+                    Copyright © 2026 Paper Bird Shishukul. All right reserved
                   </span>{" "}
                 </div>
                 <div className="col-lg-6 col-md-4 col-sm-6 text-right ">

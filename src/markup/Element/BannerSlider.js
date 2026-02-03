@@ -1,13 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import bnr1 from "./../../images/main-slider/slide4.jpg";
-import bnr2 from "./../../images/main-slider/slide7.jpg";
-import bnr3 from "./../../images/main-slider/slide6.jpg";
+import bnr1 from "./../../images/main-slider/s1.png";
+import bnr2 from "./../../images/main-slider/s2.png";
+import bnr3 from "./../../images/main-slider/s3.png";
 import Carousel from "react-bootstrap/Carousel";
 
 //Mobile
-import bnr1Mob from "./../../images/main-slider/Slide01Mob.jpg";
+import bnr1Mob from "./../../images/main-slider/s1.png";
 import bnr2Mob from "./../../images/main-slider/Slide02Mob.jpg";
 import bnr3Mob from "./../../images/main-slider/Slide03Mob.jpg";
 
