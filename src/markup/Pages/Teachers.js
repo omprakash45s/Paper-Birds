@@ -73,7 +73,10 @@ class Teachers extends Component {
 
                 <div className="row">
                   <div className="sprite-nav" style={{ textAlign: "center" }}>
-                    <img src={team1} alt="Our Teachers" />
+                    <img src={team1} alt="Our Teachers" 
+                    style={{border: "3px solid #48af53",
+                      borderRadius:"16px",
+                    }}/>
                   </div>
                 </div>
               </div>
