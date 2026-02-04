@@ -39,6 +39,9 @@ import masonary26 from "./../../images/pbsImages/img26.JPG";
 import masonary27 from "./../../images/pbsImages/img27.JPG";
 import masonary28 from "./../../images/pbsImages/img28.jpg";
 import masonary29 from "./../../images/pbsImages/img29.jpg";
+import masonary30 from './../../images/gallery/pic77.jpg';
+import masonary31 from './../../images/gallery/pic88.jpg';
+import masonary32 from './../../images/gallery/pic99.jpg';
 
 const galleryBlog = [
   { images: masonary1 },
@@ -70,6 +73,9 @@ const galleryBlog = [
   { images: masonary27 },
   { images: masonary28 },
   { images: masonary29 },
+  { images: masonary30 },
+  { images: masonary31 },
+  { images: masonary32 },
 ];
 // Masonry section
 const masonryOptions = {

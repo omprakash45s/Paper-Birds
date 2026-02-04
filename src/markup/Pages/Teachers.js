@@ -7,6 +7,9 @@ import bnr1 from "./../../images/line2.png";
 import team1 from "./../../images/team/Teachers.jpg";
 // import founderImg from "./../../images/about/Founder.jpg";
 import founderImg from "./../../images/malini.jpg";
+import Laxmi from "./../../images/laxmi.jpeg";
+import latha from "./../../images/latha.jpeg";
+
 
 const teamBlog = [
   { image: team1 },
@@ -22,13 +25,13 @@ const teachersData = [
   {
     name: "Laxmi Kumari",
     designation: "Academic Head and Paper Bird Shishukul Whitefield Center Head",
-    image: team1,
+    image: Laxmi,
     description: "Laxmi has completed her Early Childhood Education from the Spastic Society of Karnataka, Bharat Vidya Mandir, along with formal Montessori training. She brings over 16 years of experience in the field of early childhood education, including 2 years of hands-on Montessori classroom practice. She has worked as a Centre Head and Academic Coordinator at Paper Bird, Indiranagar, where she applied her expertise in academic leadership, curriculum implementation, and team mentoring. Her focus area is effective implementation of the Montessori curriculum, with a strong focus on hands-on learning, practical life activities, and experiential education. She firmly believes that children learn best through meaningful experiences that build independence, confidence, and self-worth. Her educational philosophy centers on nurturing the whole child, encouraging curiosity, independence, empathy, and respect for others. Through a well-prepared environment and guided learning, she strives to help children grow into confident, capable, and compassionate individuals."
   },
   {
     name: "Latha Rao",
     designation: "Academic Mentor & Trainer",
-    image: team1,
+    image: latha,
     description: "Latha Rao is the current director of training of IMTC (Indian Montessori Training Courses) Koramangala under the auspices of the Indian Montessori Centre. She is passionate about creating learning environments for children that help them learn with joy. She has done her primary course from Association Montessori Internationale and elementary course from Indian Montessori Centre. She has also worked in Anne Frank Montessori in Long Island, NY under the teachers exchange programme and worked with children for more than 30 years, including the Valley School of the KFI institutions. As a science graduate from the University of Madras, she has done her Masters in inclusive education from the University of Northampton, UK. Her latest learning has been an in-depth study of curating Montessori environments to integrate children with learning differences. This certificate is in collaboration with the Maria Montessori Institute, London."
   }
 ];

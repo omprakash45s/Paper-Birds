@@ -115,7 +115,7 @@ function EducationBanner() {
 function FounderNote() {
   return (
     <>
-      <div className="section-full bg-white content-inner-2">
+      <div className="section-full bg-white content-inner-2" style={{ paddingTop: "30px" }}>
         <div className="container">
           {/* Section Header */}
           <div className="section-head text-center m-b50">
@@ -226,143 +226,145 @@ class AboutUs1 extends Component {
   render() {
     return (
       <Fragment>
-        <Header />
-        <div className="page-content">
-          <PageTitle motherMenu="About Us" activeMenu="About Us" />
-          <div className="content-block">
-            <div
-              className="section-full bg-white content-inner-2 about-area"
-              style={{
-                backgroundImage: "url(" + "" + ")",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-6 col-md-12 col-sm-12 m-b15">
-                    <div className="section-head">
-                      <h2
-                        className="head-title text-secondry"
-                        style={{ color: "#48af53" }}
-                      >
-                        About Founder
-                      </h2>
-                      <h5>Mrs. Malini Selvarajan (B.Ed & MBA) </h5>
-                      <p>
-                        Paper Bird Shishukul, where every child's potential
-                        takes flight! Established in 2017 under the visionary
-                        leadership of our esteemed Chairperson, Mrs. Malini
-                        Selvarajan, Paper Bird Shishukul is a cherished
-                        institution that has been nurturing young minds with
-                        care, creativity, and innovation in the heart of
-                        Indiranagar, Bangalore.
-                      </p>
-                      <p>
-                        Under the guidance of our dedicated team of educators
-                        and staff, We are committed to imparting a comprehensive
-                        education that focuses not only on academic excellence
-                        but also on the development of creative and social
-                        skills. We understand the importance of a well-rounded
-                        education, and our programs are designed to provide
-                        students with diverse opportunities to explore and grow.
-                      </p>
-                      <h2
-                        className="head-title text-secondry"
-                        style={{ color: "#48af53" }}
-                      >
-                        Paper Bird Shishukul
-                      </h2>
-                      <p>
-                        At Paper Bird Shishukul, we invite you to become a part
-                        of our warm and nurturing community. Whether you are a
-                        parent looking for a nurturing environment for your
-                        child or an educator seeking a fulfilling teaching
-                        experience, PBS welcomes you with open arms. Together,
-                        let's shape a bright future for the leaders of tomorrow.
-                      </p>
-                      <p>
-                        Come and experience the Paper Bird Shishukul difference
-                        – where education is not just a process, but a lifelong
-                        adventure filled with curiosity, creativity, and
-                        endless possibilities.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 col-md-12 col-sm-12 teacher-content">
-                    <div className="split-box">
-                      <div className="about-media">
-                        <img src={about} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <Header />
+      <div className="page-content" style={{ paddingTop: "20px" }}>
+        <PageTitle motherMenu="About Us" activeMenu="About Us" />
+        <div className="content-block">
+        <div
+          className="section-full bg-white content-inner-2 about-area"
+          style={{
+          backgroundImage: "url(" + "" + ")",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          paddingTop: "20px",
+          paddingBottom: "0px",
+          }}
+        >
+          <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-12 col-sm-12 m-b15">
+            <div className="section-head">
+              <h2
+              className="head-title text-secondry"
+              style={{ color: "#48af53" }}
+              >
+              About Founder
+              </h2>
+              <h5>Mrs. Malini Selvarajan (B.Ed & MBA) </h5>
+              <p>
+              Paper Bird Shishukul, where every child's potential
+              takes flight! Established in 2017 under the visionary
+              leadership of our esteemed Chairperson, Mrs. Malini
+              Selvarajan, Paper Bird Shishukul is a cherished
+              institution that has been nurturing young minds with
+              care, creativity, and innovation in the heart of
+              Indiranagar, Bangalore.
+              </p>
+              <p>
+              Under the guidance of our dedicated team of educators
+              and staff, We are committed to imparting a comprehensive
+              education that focuses not only on academic excellence
+              but also on the development of creative and social
+              skills. We understand the importance of a well-rounded
+              education, and our programs are designed to provide
+              students with diverse opportunities to explore and grow.
+              </p>
+              <h2
+              className="head-title text-secondry"
+              style={{ color: "#48af53" }}
+              >
+              Paper Bird Shishukul
+              </h2>
+              <p>
+              At Paper Bird Shishukul, we invite you to become a part
+              of our warm and nurturing community. Whether you are a
+              parent looking for a nurturing environment for your
+              child or an educator seeking a fulfilling teaching
+              experience, PBS welcomes you with open arms. Together,
+              let's shape a bright future for the leaders of tomorrow.
+              </p>
+              <p>
+              Come and experience the Paper Bird Shishukul difference
+              – where education is not just a process, but a lifelong
+              adventure filled with curiosity, creativity, and
+              endless possibilities.
+              </p>
+            </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12 teacher-content">
+            <div className="split-box">
+              <div className="about-media">
+              <img src={about} alt="" />
               </div>
             </div>
-
-            {/* Founder Note Section */}
-            <FounderNote />
-
-            <div
-              className="section-full bg-white content-inner-2 about-content bg-img-fix"
-              style={{ backgroundImage: "url(" + bnr2 + ")" }}
-            >
-              <BackgroundBlog />
             </div>
-            {/*  Portfolio  */}
-            {/* <div className="section-full content-inner">
-              <div className="container">
-                <div className="section-head text-center">
-                  <h2
-                    className="head-title text-secondry"
-                    style={{ color: "#48af53" }}
-                  >
-                    Gallery
-                  </h2>
-                </div>
-                <SimpleReactLightbox>
-                  <SRLWrapper>
-                    <div className="clearfix" id="lightgallery">
-                      <ul
-                        id="masonry"
-                        className="dlab-gallery-listing gallery-grid-4 gallery"
-                      >
-                        <Masonry
-                          className={"my-gallery-class"}
-                          options={masonryOptions}
-                          disableImagesLoaded={false}
-                          updateOnEachImageLoad={false}
-                          imagesLoadedOptions={imagesLoadedOptions} // default {}
-                        >
-                          {galleryBlog.map((data, index) => (
-                            <li
-                              className="web design card-container col-lg-4 col-md-6 col-sm-6 "
-                              key={index}
-                            >
-                              <div className="dlab-box frame-box m-b30">
-                                <div className="dlab-thum dlab-img-overlay1">
-                                  <img src={data.image} alt="" />
-                                  <div className="overlay-bx">
-                                    <div className="overlay-icon">
-                                      <Iconimage />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          ))}
-                        </Masonry>
-                      </ul>
-                    </div>
-                  </SRLWrapper>
-                </SimpleReactLightbox>
-              </div>
-            </div> */}
-            <EducationBanner />
+          </div>
           </div>
         </div>
-        <Footer />
+
+        {/* Founder Note Section */}
+        <FounderNote />
+
+        <div
+          className="section-full bg-white content-inner-2 about-content bg-img-fix"
+          style={{ backgroundImage: "url(" + bnr2 + ")", paddingTop: "20px" }}
+        >
+          <BackgroundBlog />
+        </div>
+        {/*  Portfolio  */}
+        {/* <div className="section-full content-inner">
+          <div className="container">
+          <div className="section-head text-center">
+            <h2
+            className="head-title text-secondry"
+            style={{ color: "#48af53" }}
+            >
+            Gallery
+            </h2>
+          </div>
+          <SimpleReactLightbox>
+            <SRLWrapper>
+            <div className="clearfix" id="lightgallery">
+              <ul
+              id="masonry"
+              className="dlab-gallery-listing gallery-grid-4 gallery"
+              >
+              <Masonry
+                className={"my-gallery-class"}
+                options={masonryOptions}
+                disableImagesLoaded={false}
+                updateOnEachImageLoad={false}
+                imagesLoadedOptions={imagesLoadedOptions} // default {}
+              >
+                {galleryBlog.map((data, index) => (
+                <li
+                  className="web design card-container col-lg-4 col-md-6 col-sm-6 "
+                  key={index}
+                >
+                  <div className="dlab-box frame-box m-b30">
+                  <div className="dlab-thum dlab-img-overlay1">
+                    <img src={data.image} alt="" />
+                    <div className="overlay-bx">
+                    <div className="overlay-icon">
+                      <Iconimage />
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                </li>
+                ))}
+              </Masonry>
+              </ul>
+            </div>
+            </SRLWrapper>
+          </SimpleReactLightbox>
+          </div>
+        </div> */}
+        {/* <EducationBanner /> */}
+        </div>
+      </div>
+      <Footer />
       </Fragment>
     );
   }

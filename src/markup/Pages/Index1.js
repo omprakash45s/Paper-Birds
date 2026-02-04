@@ -15,10 +15,11 @@ import {
   LocalBusinessSchema,
 } from "../../components/StructuredData";
 
-import icon1 from "./../../images/icon/icon1.jpg";
-import icon2 from "./../../images/icon/icon2.jpg";
-import icon3 from "./../../images/icon/icon3.jpg";
-import icon4 from "./../../images/icon/icon4.jpg";
+import icon1 from "./../../images/icon/i5.png";
+import icon2 from "./../../images/icon/i3.png";
+import icon3 from "./../../images/icon/i6.png";
+import icon4 from "./../../images/icon/i4.png";
+
 import bnr3 from "./../../images/background/bg6.jpg";
 import bgimg3 from "./../../images/line2.png";
 
@@ -48,7 +49,7 @@ const iconBlog = [
     alt: "Child-centered Montessori education",
   },
 ];
-
+const cardColors = ["#b8d88e", "#ffd27f", "#9ad0f5", "#f7a8b8"];
 const iconBlog2 = [
   {
     icon: <i className="flaticon-rattle text-blue" />,
@@ -649,9 +650,10 @@ class Index1 extends Component {
                 Call for Admission: <a 
                   href="tel:+919741563692" 
                   style={{ color: "#48af53", textDecoration: "none", fontWeight: "700" }}
-                  aria-label="Call Whitefield branch at 097415 63692"
+                  aria-label="Call Whitefield branch at 098451 27859"
                 >
-                  097415 63692
+                   098451 27859
+
                 </a>
               </p>
             </div>
@@ -786,20 +788,23 @@ class Index1 extends Component {
 
     {/* RIGHT — IMAGE */}
     <div className="col-lg-5 col-md-12 text-center">
-      <img
-        src={largeimg}   // replace with your image path
-        alt="Paper Bird Shishukul Classroom"
-        className="img-fluid rounded-4 shadow-lg"
-        style={{
-          // maxWidth: "765px",
-          width: "100%",
-          height: "auto",
-          objectFit: "cover",
-          minHeight: "500px",
-         
-        }}
-      />
-    </div>
+  <img
+    src={largeimg}
+    alt="Paper Bird Shishukul Classroom"
+    className="img-fluid rounded-4 shadow-lg"
+    style={{
+      width: "100%",
+      height: "auto",
+      minHeight: "500px",
+      objectFit: "cover",
+
+      border: "7px solid #48af53",   // ✅ green box border
+      borderRadius: "16px",          // smoother than rounded-4
+      backgroundColor: "#fff"        // makes it look like a card
+    }}
+  />
+</div>
+
 
   </div>
 
@@ -810,14 +815,16 @@ class Index1 extends Component {
     {iconBlog2.map((item, index) => (
       <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
 
-        <div
-          className="h-100 p-4 text-center rounded-4 shadow-sm feature-card"
-          style={{
-            background: "#ffffff",
-            transition: "all 0.3s ease",
-            border: "1px solid #f1f1f1"
-          }}
-        >
+       <div
+    key={index}
+    className="h-100 p-4 text-center rounded-4 shadow-sm feature-card"
+    style={{
+      background: "#ffffff",
+      transition: "all 0.3s ease",
+      border: `3px solid ${cardColors[index % cardColors.length]}`,
+      borderRadius: "16px",
+    }}
+  >
           <div className="icon-lg mb-3" style={{ color: "#48af53" }}>
             {item.icon}
           </div>
@@ -1036,7 +1043,7 @@ class Index1 extends Component {
                     className="head-title text-secondry"
                     style={{ color: "#48af53" }}
                   >
-                    Parent Testimonials - Indiranagar Families
+                    Parent Testimonials 
                   </h2>
                   <p>
                     Hear what parents from Indiranagar and across Bengaluru say

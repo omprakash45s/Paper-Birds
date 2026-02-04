@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import PageTitle from "../Layout/PageTitle";
+
 const Contact = (props) => {
   const schoolId = "Ihspm6Py6i";
   const enquiryFor = [
@@ -81,64 +82,312 @@ const Contact = (props) => {
       <div className="page-content">
         <PageTitle motherMenu="Contact Us" activeMenu="Contact Us" />
         <div className="content-block">
-          <div className="section-full bg-white">
+          <div className="section-full bg-white content-inner">
             <div className="container">
-              <div className="row align-items-center content-inner">
-                <div className="col-lg-4 col-md-4 col-sm-6">
-                  <div className="icon-bx-wraper m-b30 left">
-                    <div className="icon-md m-b20 m-t5">
-                      <Link to={"#"} className="icon-cell text-blue">
-                        <i className="ti-headphone-alt"></i>
-                      </Link>
+              {/* Contact Info Cards - All 4 in One Row */}
+              <div className="row m-b50">
+                {/* Phone Card */}
+                <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <div 
+                    style={{
+                      background: "linear-gradient(135deg, #b8d88e 0%, #9bc776 100%)",
+                      padding: "40px 25px",
+                      borderRadius: "20px",
+                      boxShadow: "0 10px 30px rgba(184,216,142,0.3)",
+                      textAlign: "center",
+                      minHeight: "280px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 0.3s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-10px)";
+                      e.currentTarget.style.boxShadow = "0 15px 40px rgba(184,216,142,0.4)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "0 10px 30px rgba(184,216,142,0.3)";
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "50%",
+                        background: "white",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: "25px",
+                        border: "3px dashed #b8d88e"
+                      }}
+                    >
+                      <i className="ti-headphone-alt" style={{ fontSize: "40px", color: "#b8d88e" }}></i>
                     </div>
-                    <div className="icon-content">
-                      <h4 className="dlab-tilte m-b5">Phone</h4>
-                      <p>
-                        Phone 01:+91 9741563692 <br /> Phone 02: +91 9741563174
-                      </p>
-                    </div>
+                    <h4 
+                      className="dlab-tilte" 
+                      style={{ 
+                        color: "white", 
+                        marginBottom: "15px", 
+                        fontSize: "22px", 
+                        fontWeight: "700" 
+                      }}
+                    >
+                      Phone
+                    </h4>
+                    <p style={{ fontSize: "15px", color: "white", margin: 0, lineHeight: "1.8", fontWeight: "500" }}>
+                      +91 9741563692<br />
+                      +91 98451 27859
+
+                    </p>
                   </div>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-6">
-                  <div className="icon-bx-wraper m-b30 left">
-                    <div className="icon-md m-b20 m-t5">
-                      <Link to={"#"} className="icon-cell text-green">
-                        <i className="ti-location-pin"></i>
-                      </Link>
+
+                {/* Indiranagar Branch Card */}
+                <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <div 
+                    style={{
+                      background: "linear-gradient(135deg, #ffc570 0%, #ffb347 100%)",
+                      padding: "40px 25px",
+                      borderRadius: "20px",
+                      boxShadow: "0 10px 30px rgba(255,197,112,0.3)",
+                      textAlign: "center",
+                      minHeight: "280px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 0.3s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-10px)";
+                      e.currentTarget.style.boxShadow = "0 15px 40px rgba(255,197,112,0.4)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "0 10px 30px rgba(255,197,112,0.3)";
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "50%",
+                        background: "white",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: "25px",
+                        border: "3px dashed #ffc570"
+                      }}
+                    >
+                      <i className="ti-location-pin" style={{ fontSize: "40px", color: "#ffc570" }}></i>
                     </div>
-                    <div className="icon-content">
-                      <h4 className="dlab-tilte m-b5">Address</h4>
-                      <p>
-                        1321, Paramahansa Yogananda Rd, Eshwara Layout,
-                        Indiranagar, Bengaluru, Karnataka 560038
-                      </p>
-                    </div>
+                    <h4 
+                      className="dlab-tilte" 
+                      style={{ 
+                        color: "white", 
+                        marginBottom: "15px", 
+                        fontSize: "22px", 
+                        fontWeight: "700" 
+                      }}
+                    >
+                      Indiranagar
+                    </h4>
+                    <p style={{ fontSize: "14px", color: "white", margin: 0, lineHeight: "1.6", fontWeight: "500" }}>
+                      1321, Paramahansa Yogananda Rd, Eshwara Layout, Indiranagar, Bengaluru - 560038
+                    </p>
                   </div>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <div className="icon-bx-wraper m-b30 left">
-                    <div className="icon-md m-b20 m-t5">
-                      <Link to={"#"} className="icon-cell text-orange">
-                        <i className="ti-email"></i>
-                      </Link>
+
+                {/* Whitefield Branch Card */}
+                <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <div 
+                    style={{
+                      background: "linear-gradient(135deg, #f5a5b8 0%, #f28ba0 100%)",
+                      padding: "40px 25px",
+                      borderRadius: "20px",
+                      boxShadow: "0 10px 30px rgba(245,165,184,0.3)",
+                      textAlign: "center",
+                      minHeight: "280px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 0.3s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-10px)";
+                      e.currentTarget.style.boxShadow = "0 15px 40px rgba(245,165,184,0.4)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "0 10px 30px rgba(245,165,184,0.3)";
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "50%",
+                        background: "white",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: "25px",
+                        border: "3px dashed #f5a5b8"
+                      }}
+                    >
+                      <i className="ti-location-pin" style={{ fontSize: "40px", color: "#f5a5b8" }}></i>
                     </div>
-                    <div className="icon-content">
-                      <h4 className="dlab-tilte m-b5">Email</h4>
-                      <p>paperbird2017@gmail.com</p>
+                    <h4 
+                      className="dlab-tilte" 
+                      style={{ 
+                        color: "white", 
+                        marginBottom: "15px", 
+                        fontSize: "22px", 
+                        fontWeight: "700" 
+                      }}
+                    >
+                      Whitefield
+                    </h4>
+                    <p style={{ fontSize: "14px", color: "white", margin: 0, lineHeight: "1.6", fontWeight: "500" }}>
+                      Site No 16, Ashton Park, Borewell Road, Behind Casa Gopalan, Whitefield - 560066
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Card */}
+                <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
+                  <div 
+                    style={{
+                      background: "linear-gradient(135deg, #a5c9f1 0%, #8bb8ed 100%)",
+                      padding: "40px 25px",
+                      borderRadius: "20px",
+                      boxShadow: "0 10px 30px rgba(165,201,241,0.3)",
+                      textAlign: "center",
+                      minHeight: "280px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      transition: "all 0.3s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-10px)";
+                      e.currentTarget.style.boxShadow = "0 15px 40px rgba(165,201,241,0.4)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.boxShadow = "0 10px 30px rgba(165,201,241,0.3)";
+                    }}
+                  >
+                    <div 
+                      style={{ 
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: "50%",
+                        background: "white",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: "25px",
+                        border: "3px dashed #a5c9f1"
+                      }}
+                    >
+                      <i className="ti-email" style={{ fontSize: "40px", color: "#a5c9f1" }}></i>
                     </div>
+                    <h4 
+                      className="dlab-tilte" 
+                      style={{ 
+                        color: "white", 
+                        marginBottom: "15px", 
+                        fontSize: "22px", 
+                        fontWeight: "700" 
+                      }}
+                    >
+                      Email Us
+                    </h4>
+                    <p style={{ fontSize: "15px", color: "white", margin: 0, lineHeight: "1.8", fontWeight: "500" }}>
+                      paperbird2017@gmail.com
+                    </p>
                   </div>
                 </div>
               </div>
+
+              {/* Branch Locations Heading */}
               <div className="row content-inner-4">
-                <div className="banner-map col-md-12">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.957411925554!2d77.63322837507648!3d12.974575787341083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a7dde8405b%3A0x474eff279d2135a3!2sPaper%20Bird%20Shishukul!5e0!3m2!1sen!2sin!4v1697007968132!5m2!1sen!2sin"
-                    className="align-self-stretch rounded-sm border-0"
-                    style={{ width: "100%", height: "600px" }}
-                    allowfullscreen
-                  />
+                <div className="col-md-12">
+                  <div className="section-head text-center m-b40">
+                    <h2 className="head-title text-secondry" style={{ color: "#48af53" }}>
+                      Our Locations
+                    </h2>
+                    <p>Visit us at either of our conveniently located branches</p>
+                  </div>
                 </div>
               </div>
+
+              {/* Maps Section - Two Columns */}
+              <div className="row content-inner-4">
+                {/* Indiranagar Map */}
+                <div className="col-md-6 m-b30">
+                  <div className="map-container">
+                    <h4 
+                      className="text-center m-b20" 
+                      style={{ 
+                        color: "#48af53",
+                        fontSize: "22px",
+                        fontWeight: "600"
+                      }}
+                    >
+                      Indiranagar Branch
+                    </h4>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.957411925554!2d77.63322837507648!3d12.974575787341083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a7dde8405b%3A0x474eff279d2135a3!2sPaper%20Bird%20Shishukul!5e0!3m2!1sen!2sin!4v1697007968132!5m2!1sen!2sin"
+                      className="align-self-stretch rounded-sm border-0"
+                      style={{ 
+                        width: "100%", 
+                        height: "400px",
+                        border: "3px solid #48af53",
+                        borderRadius: "12px"
+                      }}
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                {/* Whitefield Map */}
+                <div className="col-md-6 m-b30">
+                  <div className="map-container">
+                    <h4 
+                      className="text-center m-b20" 
+                      style={{ 
+                        color: "#48af53",
+                        fontSize: "22px",
+                        fontWeight: "600"
+                      }}
+                    >
+                      Whitefield Branch
+                    </h4>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5383947937243!2d77.74779307507698!3d12.999512987335686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f4cf6cd7a7%3A0x8ee9c5b084f1e4f6!2sAshton%20Park!5e0!3m2!1sen!2sin!4v1697007968132!5m2!1sen!2sin"
+                      className="align-self-stretch rounded-sm border-0"
+                      style={{ 
+                        width: "100%", 
+                        height: "400px",
+                        border: "3px solid #48af53",
+                        borderRadius: "12px"
+                      }}
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div className="row contact-box content-inner-5">
                 <div className="section-head text-center col-md-12">
                   <h2 className="text-secondry" style={{ color: "#48af53" }}>
@@ -153,13 +402,6 @@ const Contact = (props) => {
                 <form
                   onSubmit={(event) => {
                     event.preventDefault();
-                    // console.log(event.target.elements.dzChildName.value);
-                    // console.log(event.target.elements.dzEnquiryFor.value);
-                    // console.log(event.target.elements.dzName.value);
-                    // console.log(event.target.elements.dzPhone.value);
-                    // console.log(event.target.elements.dzEmail.value);
-                    // console.log(event.target.elements.dzAdditionalNote.value);
-                    // console.log(event.target.elements.dzRelation.value);
                     if (relationError) {
                       setError(false);
                     }
@@ -196,7 +438,6 @@ const Contact = (props) => {
                   }}
                   className="dzForm col-md-12"
                 >
-                  {/* <input type="hidden" value="Contact" name="dzToDo" /> */}
                   <div className="row">
                     <div className="col-md-8 col-sm-8">
                       <label>Child Name</label>

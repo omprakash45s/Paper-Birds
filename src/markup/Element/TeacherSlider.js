@@ -85,8 +85,12 @@ class TeacherSlider extends Component {
 					</div>
 				</div>	 */}
 
-        <div className="sprite-nav " style={{ textAlign: "center" }}>
-          <img src={team1} alt="" />
+        <div className="sprite-nav " style={{ textAlign: "center" }}
+        
+        >
+          <img src={team1} alt=""
+          style={{borderRadius: "16px",
+        border: "5px solid #48af53"}} />
         </div>
       </>
     );

@@ -76,7 +76,8 @@ class ClassDetailContent extends Component {
                   className="img-fluid w-100 h-100"
                   style={{
                     objectFit: "cover",
-                    borderRadius: "12px",
+                    border: "7px solid #48af53",   // ✅ green box border
+      borderRadius: "16px", 
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)",
                     minHeight: "450px",
                   }}

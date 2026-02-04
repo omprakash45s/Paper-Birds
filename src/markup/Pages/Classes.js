@@ -17,7 +17,7 @@ const classesBlog = [
   {
     images: clsimg2,
     title: "Daycare",
-    time: "9.00 am to 6.30 pm",
+    time: "12.00 pm to 5.30 pm",
     age: "1-8",
     size: "NA",
   },
