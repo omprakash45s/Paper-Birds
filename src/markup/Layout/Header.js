@@ -6,28 +6,42 @@ import newlogo from './../../images/newlogo.png';
 
 // Custom CSS for inline styling
 const headerStyles = {
-	navbar: {
-		padding: '3px 0', // Further reduced padding
-		minHeight: '60px' // Reduced navbar height from 70px to 60px
-	},
-	logo: {
-		width: '280px', // Increased from 220px
-		height: 'auto',
-		transition: 'all 0.3s ease'
-	},
-	mobileLogo: {
-		width: '240px', // Increased from 180px
-		height: 'auto'
-	},
-	navItem: {
-		padding: '10px 18px', // Increased padding for nav items
-		fontSize: '16px' // Increased font size from 15px to 16px
-	}
+  navbar: {
+    padding: '15px 0',      // Increased vertical padding
+    minHeight: '110px',     // Increased height to fit the big logo
+    display: 'flex',
+    alignItems: 'center'
+  },
+  logo: {
+    width: '380px',         // Significantly increased (was 280px)
+    maxWidth: '100%',       // Ensures it doesn't overflow on small screens
+    height: 'auto',
+    transition: 'all 0.3s ease',
+    display: 'block'
+  },
+  mobileLogo: {
+    width: '280px',         // Increased for mobile
+    height: 'auto'
+  },
+  navItem: {
+    padding: '12px 25px',   // Increased spacing between items
+    fontSize: '18px',       // Increased font size
+    fontWeight: '700',      // Bold font
+    letterSpacing: '0.5px', // Adds a premium feel
+    display: 'flex',
+    alignItems: 'center'
+  },
+  // Added a specific style for links to ensure bold applies
+  navLink: {
+    fontWeight: '700',
+    fontSize: '18px',
+    textDecoration: 'none'
+  }
 };
 
 class Header extends Component {
   componentDidMount() {
-    // sidebar open/close
+    // sidebar open/close logic
     const Navicon = document.querySelector('.navicon');
     const sidebarmenu = document.querySelector('.myNavbar');
 
@@ -40,7 +54,7 @@ class Header extends Component {
       Navicon.addEventListener('click', toggleFunc);
     }
 
-    // Sidenav li open close
+    // Sidenav li open close logic
     const navUl = [].slice.call(document.querySelectorAll('.navbar-nav > li'));
     for (let y = 0; y < navUl.length; y++) {
       navUl[y].addEventListener('click', function () { checkLi(this) });
@@ -65,6 +79,7 @@ class Header extends Component {
               style={headerStyles.navbar}
             >
               <div className="container clearfix">
+                
                 {/* Website logo - Desktop */}
                 <div className="logo-header mostion">
                   <Link to={"./"} className="dez-page">
@@ -85,6 +100,7 @@ class Header extends Component {
                   aria-controls="navbarNavDropdown" 
                   aria-expanded="false" 
                   aria-label="Toggle navigation"
+                  style={{ marginTop: '25px' }} // Align button with new larger height
                 >
                   <span></span>
                   <span></span>
@@ -95,7 +111,7 @@ class Header extends Component {
                 <div 
                   className="header-nav navbar-collapse collapse myNavbar justify-content-end" 
                   id="navbarNavDropdown"
-                  style={{ padding: '5px 0' }} // Reduced inner padding
+                  style={{ padding: '0' }}
                 >
                   {/* Website logo - Mobile */}
                   <div className="logo-header mostion d-lg-none">
@@ -110,25 +126,23 @@ class Header extends Component {
                   
                   <ul className="nav navbar-nav">
                     <li style={headerStyles.navItem}>
-                      <Link to={"./"} style={{ color: "#ff564b" }}>Home</Link>
+                      <Link to={"./"} style={{ ...headerStyles.navLink, color: "#ff564b" }}>Home</Link>
                     </li>
                     <li style={headerStyles.navItem}>
-                      <Link to={"/about-1"} style={{ color: "#ffb02d" }}>About Us</Link>
+                      <Link to={"/about-1"} style={{ ...headerStyles.navLink, color: "#ffb02d" }}>About Us</Link>
                     </li>
                     <li style={headerStyles.navItem}>
-                      <Link to={"/classes"} style={{ color: "#cfd92f" }}>Classes</Link>
+                      <Link to={"/classes"} style={{ ...headerStyles.navLink, color: "#cfd92f" }}>Classes</Link>
+                    </li>
+                    {/* Teachers link removed as requested */}
+                    <li style={headerStyles.navItem}>
+                      <Link to={"/gallery-masonary"} style={{ ...headerStyles.navLink, color: "#ffb02d" }}>Gallery</Link>
                     </li>
                     <li style={headerStyles.navItem}>
-                      <Link to={"/teachers"} style={{ color: "#00bbc0" }}>Teachers</Link>
+                      <Link to={"/careers"} style={{ ...headerStyles.navLink, color: "#28a745" }}>Careers</Link>
                     </li>
                     <li style={headerStyles.navItem}>
-                      <Link to={"/gallery-masonary"} style={{ color: "#ffb02d" }}>Gallery</Link>
-                    </li>
-                    <li style={headerStyles.navItem}>
-                      <Link to={"/careers"} style={{ color: "#28a745" }}>Careers</Link>
-                    </li>
-                    <li style={headerStyles.navItem}>
-                      <Link to={"/contact-us"} style={{ color: "#473b79" }}>Contact Us</Link>
+                      <Link to={"/contact-us"} style={{ ...headerStyles.navLink, color: "#473b79" }}>Contact Us</Link>
                     </li>
                   </ul>
                 </div>

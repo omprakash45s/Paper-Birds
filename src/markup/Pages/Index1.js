@@ -7,6 +7,8 @@ import TestiMonialSlider from "../Element/TestiMonialSlider";
 import TeacherSlider from "../Element/TeacherSlider";
 import GallerySlider from "../Element/GallerySlider";
 import Curriculum from "../Element/Curriculum";
+import SpotsCounter from "./SpotsCounter";
+import FloatingEnquiry from "./FloatingEnquiry";
 import InstagramFeed from "../Element/InstagramFeed";
 import SEO from "../../components/SEO";
 import largeimg from "./../../images/blog/large/Curriculum.jpg";
@@ -19,9 +21,65 @@ import icon1 from "./../../images/icon/i5.png";
 import icon2 from "./../../images/icon/i3.png";
 import icon3 from "./../../images/icon/i6.png";
 import icon4 from "./../../images/icon/i4.png";
+import loc from "./../../images/icon/location.svg";
+import call from "./../../images/icon/call.svg";
+import trophy from "./../../images/icon/trophy.svg";
 
-import bnr3 from "./../../images/background/bg6.jpg";
+
+import bnr3 from "./../../images/background/bg6.png";
 import bgimg3 from "./../../images/line2.png";
+// const SpotsCounter = () => {
+//   // Start at 80, end at 50
+//   const [count, setCount] = React.useState(80);
+
+//   React.useEffect(() => {
+//     let start = 80;
+//     const end = 50;
+    
+//     // Timer to decrease number
+//     const timer = setInterval(() => {
+//       start -= 1;
+//       setCount(start);
+//       if (start === end) {
+//         clearInterval(timer);
+//       }
+//     }, 50); // Speed of animation (lower is faster)
+
+//     return () => clearInterval(timer);
+//   }, []);
+
+//   return (
+//     <div style={{
+//       background: "linear-gradient(135deg, #48af53 0%, #3a8f42 100%)",
+//       display: "inline-block",
+//       padding: "15px 40px",
+//       borderRadius: "50px",
+//       boxShadow: "0 8px 25px rgba(72,175,83,0.3)",
+//       animation: "pulse 2s infinite"
+//     }}>
+//       <p style={{ 
+//         color: "white", 
+//         margin: "0",
+//         fontSize: "18px",
+//         fontWeight: "600",
+//         letterSpacing: "0.5px"
+//       }}>
+//         <i className="fa fa-clock-o" style={{ marginRight: "10px" }}></i>
+//         Only 
+//         <span style={{ 
+//           fontSize: "24px", 
+//           fontWeight: "700",
+//           padding: "0 8px",
+//           display: "inline-block",
+//           minWidth: "40px" // Prevents jittering when numbers change width
+//         }}>
+//           {count}
+//         </span> 
+//         Spots Available!
+//       </p>
+//     </div>
+//   );
+// };
 
 const iconBlog = [
   {
@@ -53,23 +111,23 @@ const cardColors = ["#b8d88e", "#ffd27f", "#9ad0f5", "#f7a8b8"];
 const iconBlog2 = [
   {
     icon: <i className="flaticon-rattle text-blue" />,
-    title: "Daycare Services in Indiranagar",
-    desc: "Premium daycare services in Indiranagar, Bengaluru. We provide a safe and nurturing environment where children receive supervised care, engage in age-appropriate activities, and socialize with their peers.",
+    title: "Daycare Services in Whitefield",
+    desc: "Premium daycare services in Borewell Road,Whitefield, Bengaluru. We provide a safe and nurturing environment where children receive supervised care, engage in age-appropriate activities, and socialize with their peers.",
   },
   {
     icon: <i className="flaticon-bricks text-green" />,
     title: "Safe Transport in Bengaluru",
-    desc: "Reliable and safe transport services across Bengaluru, ensuring convenient and secure commuting for our students in Indiranagar and surrounding areas.",
+    desc: "Reliable and safe transport services across Bengaluru, ensuring convenient and secure commuting for our students in Whitefield and surrounding areas.",
   },
   {
     icon: <i className="flaticon-puzzle text-orange" />,
     title: "Hygienic & Nutritious Food",
-    desc: "Enjoy peace of mind knowing that our Indiranagar preschool provides hygienic and nutritious meals, ensuring your child's health and well-being with carefully planned menus.",
+    desc: "Enjoy peace of mind knowing that our Whitefield preschool provides hygienic and nutritious meals, ensuring your child's health and well-being with carefully planned menus.",
   },
   {
     icon: <i className="flaticon-boy text-green" />,
     title: "Safety First - CCTV Monitored",
-    desc: "14 CCTV cameras always monitored, school gate always kept locked, safety grills, safe and child-friendly flooring. All staff credentials and contacts have been thoroughly verified.",
+    desc: "Multiple CCTV cameras always monitored, school gate always kept locked, safety grills, safe and child-friendly flooring. All staff credentials and contacts have been thoroughly verified.",
   },
 ];
 
@@ -78,8 +136,8 @@ class Index1 extends Component {
     return (
       <Fragment>
         <SEO
-          title="Paper Bird Shishukul - Best Montessori Preschool & Daycare in Indiranagar, Bengaluru"
-          description="Paper Bird Shishukul is the premier Montessori preschool and daycare in Indiranagar, Bengaluru offering holistic early childhood education. Located at 1321, Paramahansa Yogananda Rd. Nurturing young minds since 2017 with Montessori-certified teachers, safe CCTV-monitored environment, and child-centered learning. Call 097415 63692 for admission."
+          title="Paper Bird Shishukul - Best Montessori Preschool & Daycare in Indiranagar and Whitefield, Bengaluru"
+          description="Paper Bird Shishukul is the premier Montessori preschool and daycare in Indiranagar, Bengaluru offering holistic early childhood education. Located at 1321, Paramahansa Yogananda Rd. Nurturing young minds since 2017 with Montessori-certified teachers, safe CCTV-monitored environment, and child-centered learning. Call 98451 27859 for admission."
           keywords="montessori preschool indiranagar, best preschool indiranagar, daycare indiranagar, montessori preschool bengaluru, daycare bengaluru, early childhood education indiranagar, preschool bangalore, montessori school indiranagar, paper bird shishukul, kindergarten bengaluru, child care center indiranagar, holistic education, montessori certified teachers, best preschool indiranagar, preschool paramahansa yogananda road, preschool near me, daycare near indiranagar, montessori daycare bangalore"
           url="https://paperbirdshishukul.com/"
         />
@@ -89,6 +147,7 @@ class Index1 extends Component {
         <div className="page-content bg-white">
           {/* Slider Banner */}
           <BannerSlider />
+          <FloatingEnquiry />
           {/* Slider Banner */}
           <div className="section-full bg-white content-inner-2" style={{ position: "relative", overflow: "hidden" }}>
   {/* Decorative Background Elements */}
@@ -160,6 +219,7 @@ class Index1 extends Component {
           >
             Paper Bird Promise
           </h2>
+          
           <p style={{ 
             fontSize: "18px", 
             lineHeight: "1.8", 
@@ -173,7 +233,7 @@ class Index1 extends Component {
         </div>
       </div>
     </div>
-
+   
     {/* USP Section */}
     <div className="row justify-content-center">
       <div className="col-lg-12">
@@ -404,31 +464,10 @@ class Index1 extends Component {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center m-t40">
-          <div style={{
-            background: "linear-gradient(135deg, #48af53 0%, #3a8f42 100%)",
-            display: "inline-block",
-            padding: "15px 40px",
-            borderRadius: "50px",
-            boxShadow: "0 8px 25px rgba(72,175,83,0.3)",
-            animation: "pulse 2s infinite"
-          }}>
-            <p style={{ 
-              color: "white", 
-              margin: "0",
-              fontSize: "18px",
-              fontWeight: "600",
-              letterSpacing: "0.5px"
-            }}>
-              <i className="fa fa-clock-o" style={{ marginRight: "10px" }}></i>
-              Only <span style={{ 
-                fontSize: "24px", 
-                fontWeight: "700",
-                padding: "0 8px"
-              }}>32</span> Spots Available!
-            </p>
-          </div>
-        </div>
+       {/* Animated Spots Available Section */}
+<div className="text-center m-t40">
+  <SpotsCounter />
+</div>
       </div>
     </div>
   </div>
@@ -491,176 +530,161 @@ class Index1 extends Component {
 
 
     {/* Branches Section */}
-    <div className="row justify-content-center mb-5">
-      {/* Indiranagar Branch Card */}
-      <div className="col-lg-5 col-md-6 col-sm-12 m-b30">
-        <div 
-          className="branch-card" 
-          style={{
-            border: "2px solid #48af53",
-            borderRadius: "15px",
-            padding: "30px",
-            height: "100%",
-            boxShadow: "0 5px 15px rgba(72, 175, 83, 0.1)",
-            transition: "transform 0.3s ease"
-          }}
-          onMouseOver="this.style.transform='translateY(-5px)'"
-          onMouseOut="this.style.transform='translateY(0)'"
-          itemScope
-          itemType="https://schema.org/ChildCare"
-        >
-          <meta itemProp="name" content="Paper Bird Shishukul - Indiranagar" />
-          <meta itemProp="address" content="1321, Paramahansa Yogananda Road, Eshwara Layout, Indiranagar, Bengaluru" />
-          <div className="branch-badge" style={{
-            backgroundColor: "#48af53",
-            color: "white",
-            padding: "5px 15px",
-            borderRadius: "20px",
-            display: "inline-block",
-            marginBottom: "20px",
-            fontSize: "14px",
-            fontWeight: "600"
-          }}>
-            Flagship Branch
-          </div>
-          <h2 className="head-title text-secondry"
-            style={{
-              color: "#48af53",
-              fontSize: "26px",
-              marginBottom: "15px",
-              fontWeight: "700"
-            }}
-         
-          >
-            Indiranagar Branch
-          </h2>
-          <div className="branch-details">
-            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
-              <span style={{ marginRight: "10px", minWidth: "24px" }}>📍</span>
-              <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <span itemProp="streetAddress">1321, Paramahansa Yogananda Road</span>, 
-                <span itemProp="addressLocality"> Eshwara Layout, Indiranagar</span>, 
-                <span itemProp="addressRegion"> Bengaluru</span>
-              </span>
-            </p>
-            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
-              <span style={{ marginRight: "10px", minWidth: "24px" }}>🏆</span>
-              <span>Serving families in Bengaluru since 2017 | Montessori Certified Teachers</span>
-            </p>
-            <div 
-              className="branch-contact" 
-              style={{ 
-                backgroundColor: "#f9f9f9", 
-                padding: "15px", 
-                borderRadius: "10px",
-                marginTop: "20px"
-              }}
-              itemProp="contactPoint"
-              itemScope
-              itemType="https://schema.org/ContactPoint"
-            >
-              <p style={{ fontSize: "18px", color: "#48af53", fontWeight: "600", margin: 0 }}>
-                <meta itemProp="contactType" content="Admission Inquiry" />
-                <meta itemProp="telephone" content="+919741563692" />
-                <span style={{ marginRight: "10px" }}>📞</span>
-                Call for Admission: <a 
-                  href="tel:+919741563692" 
-                  style={{ color: "#48af53", textDecoration: "none", fontWeight: "700" }}
-                  aria-label="Call Indiranagar branch at 097415 63692"
-                >
-                  097415 63692
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+   <div className="row justify-content-center mb-5">
+  
+  {/* --- Indiranagar Branch (Green Theme) --- */}
+  <div className="col-lg-5 col-md-6 col-sm-12 m-b30">
+    <div 
+      className="branch-card" 
+      style={{
+        borderTop: "5px solid #48af53", // Green Top Border
+        backgroundColor: "#fff",
+        borderRadius: "15px",
+        padding: "35px 30px",
+        height: "100%",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+        position: "relative",
+        transition: "all 0.3s ease"
+      }}
+      onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+      onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+    >
+      {/* Badge */}
+      <div style={{
+        position: "absolute",
+        top: "20px",
+        right: "20px",
+        backgroundColor: "#e8f5e9",
+        color: "#2e7d32",
+        padding: "6px 15px",
+        borderRadius: "20px",
+        fontSize: "12px",
+        fontWeight: "700",
+        textTransform: "uppercase"
+      }}>
+        Flagship Campus
       </div>
 
-      {/* Whitefield Branch Card */}
-      <div className="col-lg-5 col-md-6 col-sm-12 m-b30">
-        <div 
-          className="branch-card" 
-          style={{
-            border: "2px solid #48af53",
-            borderRadius: "15px",
-            padding: "30px",
-            height: "100%",
-            boxShadow: "0 5px 15px rgba(72, 175, 83, 0.1)",
-            transition: "transform 0.3s ease"
-          }}
-          onMouseOver="this.style.transform='translateY(-5px)'"
-          onMouseOut="this.style.transform='translateY(0)'"
-          itemScope
-          itemType="https://schema.org/ChildCare"
-        >
-          <meta itemProp="name" content="Paper Bird Shishukul - Whitefield" />
-          <meta itemProp="address" content="Whitefield, Bengaluru, Karnataka" />
-          <div className="branch-badge" style={{
-            backgroundColor: "#48af53",
-            color: "white",
-            padding: "5px 15px",
-            borderRadius: "20px",
-            display: "inline-block",
-            marginBottom: "20px",
-            fontSize: "14px",
-            fontWeight: "600"
-          }}>
-            New Branch
-          </div>
-          <h2 
-            style={{
-              color: "#48af53",
-              fontSize: "26px",
-              marginBottom: "15px",
-              fontWeight: "700"
-            }}
-            itemProp="branchOf"
-          >
-            Whitefield Branch
-          </h2>
-          <div className="branch-details">
-            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
-              <span style={{ marginRight: "10px", minWidth: "24px" }}>📍</span>
-              <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <span itemProp="addressLocality">Whitefield</span>, 
-                <span itemProp="addressRegion"> Bengaluru</span>, 
-                <span itemProp="addressCountry"> Karnataka</span>
-              </span>
-            </p>
-            <p style={{ fontSize: "16px", color: "#666", marginBottom: "10px", display: "flex", alignItems: "flex-start" }}>
-              <span style={{ marginRight: "10px", minWidth: "24px" }}>🏆</span>
-              <span>New Premium Campus | Same Montessori Excellence | Enrolling Now</span>
-            </p>
-            <div 
-              className="branch-contact" 
-              style={{ 
-                backgroundColor: "#f9f9f9", 
-                padding: "15px", 
-                borderRadius: "10px",
-                marginTop: "20px"
-              }}
-              itemProp="contactPoint"
-              itemScope
-              itemType="https://schema.org/ContactPoint"
-            >
-              <p style={{ fontSize: "18px", color: "#48af53", fontWeight: "600", margin: 0 }}>
-                <meta itemProp="contactType" content="Admission Inquiry" />
-                <meta itemProp="telephone" content="+919741563692" />
-                <span style={{ marginRight: "10px" }}>📞</span>
-                Call for Admission: <a 
-                  href="tel:+919741563692" 
-                  style={{ color: "#48af53", textDecoration: "none", fontWeight: "700" }}
-                  aria-label="Call Whitefield branch at 098451 27859"
-                >
-                   098451 27859
+      <h2 style={{ color: "#48af53", fontSize: "28px", fontWeight: "700", marginBottom: "20px" }}>
+        Indiranagar
+      </h2>
 
-                </a>
-              </p>
-            </div>
-          </div>
+      {/* Address */}
+      <div className="d-flex align-items-start mb-3">
+        <img src={loc} alt="Location" style={{ width: "24px", height: "24px", marginRight: "15px", marginTop: "4px" }} />
+        <p style={{ color: "#555", fontSize: "16px", margin: 0, lineHeight: "1.6" }}>
+          1321, Paramahansa Yogananda Rd, <br/>Eshwara Layout, Indiranagar, Bengaluru
+        </p>
+      </div>
+
+      {/* Legacy */}
+      <div className="d-flex align-items-start mb-3">
+        <img src={trophy} alt="Trophy" style={{ width: "24px", height: "24px", marginRight: "15px", marginTop: "4px" }} />
+        <p style={{ color: "#555", fontSize: "16px", margin: 0, lineHeight: "1.6" }}>
+          Serving families since 2017. A trusted Montessori environment nurturing over 590+ children.
+        </p>
+      </div>
+
+      {/* Highlights (Fills White Space) */}
+      <div style={{ backgroundColor: "#f9f9f9", padding: "15px", borderRadius: "10px", margin: "20px 0" }}>
+        <h6 style={{ color: "#48af53", marginBottom: "10px", fontWeight: "700", fontSize: "16px" }}>Campus Highlights:</h6>
+        <ul style={{ paddingLeft: "20px", margin: 0, color: "#666", fontSize: "15px" }}>
+          <li style={{ marginBottom: "5px" }}>Spacious outdoor play area</li>
+          <li style={{ marginBottom: "5px" }}>Pure Montessori environments</li>
+          <li>Experienced senior faculty</li>
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div className="d-flex align-items-center mt-auto" style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
+        <img src={call} alt="Call" style={{ width: "24px", height: "24px", marginRight: "15px" }} />
+        <div>
+          <span style={{ display: "block", fontSize: "14px", color: "#888" }}>Admissions Open</span>
+          <a href="tel:+9198451 27859" style={{ color: "#48af53", fontSize: "20px", fontWeight: "700", textDecoration: "none" }}>
+            +91 98451 27859
+          </a>
         </div>
       </div>
     </div>
+  </div>
+
+  {/* --- Whitefield Branch (Orange Theme) --- */}
+  <div className="col-lg-5 col-md-6 col-sm-12 m-b30">
+    <div 
+      className="branch-card" 
+      style={{
+        borderTop: "5px solid #f57c00", // Orange Top Border
+        backgroundColor: "#fff",
+        borderRadius: "15px",
+        padding: "35px 30px",
+        height: "100%",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+        position: "relative",
+        transition: "all 0.3s ease"
+      }}
+      onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+      onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+    >
+      {/* Badge */}
+      <div style={{
+        position: "absolute",
+        top: "20px",
+        right: "20px",
+        backgroundColor: "#fff3e0",
+        color: "#ef6c00",
+        padding: "6px 15px",
+        borderRadius: "20px",
+        fontSize: "12px",
+        fontWeight: "700",
+        textTransform: "uppercase"
+      }}>
+        New Campus
+      </div>
+
+      <h2 style={{ color: "#f57c00", fontSize: "28px", fontWeight: "700", marginBottom: "20px" }}>
+        Whitefield
+      </h2>
+
+      {/* Address */}
+      <div className="d-flex align-items-start mb-3">
+        <img src={loc} alt="Location" style={{ width: "24px", height: "24px", marginRight: "15px", marginTop: "4px" }} />
+        <p style={{ color: "#555", fontSize: "16px", margin: 0, lineHeight: "1.6" }}>
+          Site No 16, Ashton Park, <br/>Borewell Road, Whitefield, Bengaluru
+        </p>
+      </div>
+
+      {/* Info */}
+      <div className="d-flex align-items-start mb-3">
+        <img src={trophy} alt="Trophy" style={{ width: "24px", height: "24px", marginRight: "15px", marginTop: "4px" }} />
+        <p style={{ color: "#555", fontSize: "16px", margin: 0, lineHeight: "1.6" }}>
+          State-of-the-art facility bringing the same standard of excellence to a new neighborhood.
+        </p>
+      </div>
+
+       {/* Highlights (Fills White Space) */}
+       <div style={{ backgroundColor: "#fff8e1", padding: "15px", borderRadius: "10px", margin: "20px 0" }}>
+        <h6 style={{ color: "#f57c00", marginBottom: "10px", fontWeight: "700", fontSize: "16px" }}>Campus Highlights:</h6>
+        <ul style={{ paddingLeft: "20px", margin: 0, color: "#666", fontSize: "15px" }}>
+          <li style={{ marginBottom: "5px" }}>Premium modern infrastructure</li>
+          <li style={{ marginBottom: "5px" }}>Secure & monitored premises</li>
+          <li>Dedicated Daycare wing</li>
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div className="d-flex align-items-center mt-auto" style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
+        <img src={call} alt="Call" style={{ width: "24px", height: "24px", marginRight: "15px" }} />
+        <div>
+          <span style={{ display: "block", fontSize: "14px", color: "#888" }}>Admissions Open</span>
+          <a href="tel:+919845127859" style={{ color: "#f57c00", fontSize: "20px", fontWeight: "700", textDecoration: "none" }}>
+            +91 98451 27859
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
     {/* Features Section */}
     <div className="section-subhead text-center mb-4">
@@ -713,7 +737,7 @@ class Index1 extends Component {
         Book a Campus Tour Today!
       </p>
       <a 
-        href="tel:+919741563692"
+        href="tel:+919845127859"
         className="btn"
         style={{
           backgroundColor: "#48af53",
@@ -730,7 +754,7 @@ class Index1 extends Component {
         onMouseOut="this.style.backgroundColor='#48af53'; this.style.transform='scale(1)'"
         aria-label="Call for admission inquiry"
       >
-        📞 Call Now: 097415 63692
+        📞 Call Now: 98451 27859
       </a>
     </div>
   </div>
@@ -763,7 +787,7 @@ class Index1 extends Component {
         </h2>
 
         <p style={{ textAlign: "justify" }}>
-          At Paper Bird Shishukul, Indiranagar's trusted Montessori preschool,
+          At Paper Bird Shishukul, Whitefield & Indiranagar's trusted Montessori preschool,
           we are dedicated to providing high-quality holistic education that
           goes beyond textbooks and classrooms. Our mission is to create a
           vibrant learning environment where children in Bengaluru can blossom
@@ -776,7 +800,7 @@ class Index1 extends Component {
 
         <p style={{ textAlign: "justify" }}>
           Our vision extends beyond the confines of traditional education. As
-          one of the leading preschools in Indiranagar, we aspire to invoke in
+          one of the leading preschools in Whitefield & Indiranagar, we aspire to invoke in
           our students a genuine love for learning – a love that will accompany
           them throughout their lives. By instilling a sense of curiosity,
           resilience, and empathy, we prepare our students to face the
@@ -867,7 +891,7 @@ class Index1 extends Component {
         Why Choose Paper Bird Shishukul ?
       </h2>
       <p style={{ maxWidth: "900px", margin: "0 auto" }}>
-        At Paper Bird, childhood is respected, emotions are honoured, and learning unfolds naturally.
+        At Paper Bird Shishukul, childhood is respected, emotions are honoured, and learning unfolds naturally.
       </p>
     </div>
     <div className="row m-t30">
@@ -997,11 +1021,11 @@ class Index1 extends Component {
                     className="head-title text-secondry"
                     style={{ color: "#48af53" }}
                   >
-                    Gallery - Our Preschool in Indiranagar
+                    Gallery 
                   </h2>
                   <p>
                     Take a virtual tour of our beautiful Montessori preschool in
-                    Indiranagar, Bengaluru
+                    Whitefield and Indiranagar's , Bengaluru
                   </p>
                 </div>
                 <GallerySlider />
@@ -1075,21 +1099,60 @@ function BackgroundBlog2() {
               animationName: "fadeIn",
             }}
           >
-            <div className="section-head text-center">
-              <h3 className="text-white">
-                Join Our New Session at Indiranagar's Best Montessori Preschool
-              </h3>
-              <h2>
-                Call To Enrol Your Child in Indiranagar <br />
-                <span className="text-yellow">+91 9741563692</span>
-              </h2>
-              <p className="text-white" style={{ fontSize: "16px", marginTop: "15px" }}>
-                Visit us at 1321, Paramahansa Yogananda Rd, Indiranagar, Bengaluru
-              </p>
-              <Link to={"./contact-us"} className="btn btn-md radius-xl">
-                Contact Us for Admission
-              </Link>
-            </div>
+           <div className="section-head text-center">
+  <h3 style={{ 
+    color: "#052c52", // Deep Midnight Blue
+    fontWeight: "700",
+    textShadow: "2px 2px 4px rgba(255,255,255,0.8)" // Glow for readability
+  }}>
+    Join Our New Session at Borewell Road, Whitefield's Best Preschool
+  </h3>
+
+  <h2 style={{ 
+    color: "#052c52",
+    textShadow: "2px 2px 4px rgba(255,255,255,0.8)"
+  }}>
+    Call To Enrol Your Child in Whitefield  <br />
+    <span style={{ 
+      color: "#d32f2f", // Strong Red for emphasis
+      fontWeight: "800", 
+      display: "inline-block", 
+      marginTop: "5px",
+      fontSize: "40px"
+    }}>
+      +91  98451 27859
+    </span>
+  </h2>
+
+  <p style={{ 
+    color: "#052c52", 
+    fontSize: "18px", 
+    marginTop: "15px", 
+    fontWeight: "600",
+    textShadow: "1px 1px 2px rgba(255,255,255,0.8)"
+  }}>
+    Visit us at Site No 16, Ashton Park, Borewell Road, Behind Casa Gopalan, 
+  </p>
+
+  <Link 
+    to={"./contact-us"} 
+    className="btn btn-md radius-xl"
+    style={{
+      backgroundColor: "#ff564b", // Vibrant Red-Orange
+      color: "#ffffff",
+      border: "none",
+      marginTop: "20px",
+      fontWeight: "700",
+      padding: "15px 35px",
+      boxShadow: "0 10px 20px rgba(255, 86, 75, 0.4)", // Glowing shadow
+      fontSize: "16px",
+      textTransform: "uppercase",
+      letterSpacing: "1px"
+    }}
+  >
+    Contact Us for Admission
+  </Link>
+</div>
           </div>
         </div>
       </div>

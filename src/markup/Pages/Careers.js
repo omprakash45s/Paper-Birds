@@ -19,16 +19,6 @@ const openRoles = [
     id: 2,
     title: "Montessori Teacher - Experienced",
     slug: "montessori-teacher-experienced"
-  },
-  {
-    id: 3,
-    title: "HR Manager",
-    slug: "hr-manager"
-  },
-  {
-    id: 4,
-    title: "Marketing Co-Ordinator",
-    slug: "marketing-coordinator"
   }
 ];
 

@@ -31,7 +31,7 @@ class Footer extends Component {
                 <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 footer-col-4">
                   <div className="widget widget_services border-0">
                     <h5 className="footer-title" style={{ color: "#48af53" }}>
-                      Information
+                      Quick Links
                     </h5>
                     <ul className="list-2">
                       <li>
@@ -46,9 +46,9 @@ class Footer extends Component {
                       <li>
                         <Link to={"/classes"}>Classes</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to={"/teachers"}>Teachers</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link to={"/gallery-masonary"}>Gallery</Link>
                       </li>

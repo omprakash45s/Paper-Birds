@@ -13,7 +13,7 @@ export default class ThemeButton extends Component {
           <span>whatsapp</span>
         </a>
         <a
-          href="https://www.facebook.com/PaperBirdPreSchoolandDayCare?mibextid=ZbWKwL"
+          href="https://www.facebook.com/people/Paper-Bird-Preschool-and-daycare/100064875279846/#"
           target="_blank"
           class="  theme-btn bt-facebook"
         >

@@ -345,7 +345,7 @@ var lilTriangleAcademy = function(){
 				var menu = jQuery('.sticky-header');
 				if ($(window).scrollTop() > menu.offset().top) {
 					menu.addClass('is-fixed');
-					$('.header-lilTriangleAcademy .container > .logo-header .logo').attr('src','images/logo.png');
+					$('.header-lilTriangleAcademy .container > .logo-header .logo').attr('src','images/newlogo.png');
 				} else {
 					menu.removeClass('is-fixed');
 					$('.header-lilTriangleAcademy .container > .logo-header .logo').attr('src','images/logo-white.png')

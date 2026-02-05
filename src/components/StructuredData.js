@@ -79,7 +79,7 @@ export const OrganizationSchema = () => {
     },
     "sameAs": [
       "https://www.instagram.com/paperbirdshishukul/",
-      "https://www.facebook.com/paperbirdshishukul/"
+      "https://www.facebook.com/people/Paper-Bird-Preschool-and-daycare/100064875279846/#"
     ],
     "founder": {
       "@type": "Person",

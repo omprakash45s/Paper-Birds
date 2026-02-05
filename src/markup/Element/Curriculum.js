@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from "react";
-import largeimg from "./../../images/blog/large/Curriculum.jpg";
+import largeimg from "./../../images/blog/large/Curriculum.jpg"; // Using this as the common image for now
 import prayer from "./../../images/prayer.svg";
 import yoga from "./../../images/yoga.svg";
 import dance from "./../../images/dance.svg";
@@ -13,31 +13,35 @@ import story from "./../../images/story.svg";
 import rhyme from "./../../images/rhyme.svg";
 import music from "./../../images/music.svg";
 
-
 class ClassDetailContent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hoveredIndex: null,
+    };
+  }
+
   render() {
     const scheduleItems = [
-  { icon: prayer, title: "Prayer", bgColor: "#b8d88e", iconBg: "#a5c97b" },
-  { icon: yoga, title: "Yoga", bgColor: "#b8d88e", iconBg: "#a5c97b" },
-  { icon: dance, title: "Dance", bgColor: "#b8d88e", iconBg: "#a5c97b" },
+      { icon: prayer, title: "Prayer", bgColor: "#b8d88e", iconBg: "#a5c97b", img: largeimg },
+      { icon: yoga, title: "Yoga", bgColor: "#b8d88e", iconBg: "#a5c97b", img: largeimg },
+      { icon: dance, title: "Dance", bgColor: "#b8d88e", iconBg: "#a5c97b", img: largeimg },
 
-  { icon: circle, title: "Circle Time", bgColor: "#ffc570", iconBg: "#ffb347" },
-  { icon: learning, title: "Concept Learning", bgColor: "#ffc570", iconBg: "#ffb347" },
-  { icon: snacks, title: "Snacks Time", bgColor: "#ffc570", iconBg: "#ffb347" },
+      { icon: circle, title: "Circle Time", bgColor: "#ffc570", iconBg: "#ffb347", img: largeimg },
+      { icon: learning, title: "Concept Learning", bgColor: "#ffc570", iconBg: "#ffb347", img: largeimg },
+      { icon: snacks, title: "Snacks Time", bgColor: "#ffc570", iconBg: "#ffb347", img: largeimg },
 
-  { icon: outdoor, title: "Outdoor Play", bgColor: "#f5a5b8", iconBg: "#ea8fa5" },
-  { icon: lifeskills, title: "Life Skills", bgColor: "#f5a5b8", iconBg: "#ea8fa5" },
-  { icon: art, title: "Art & Craft", bgColor: "#f5a5b8", iconBg: "#ea8fa5" },
+      { icon: outdoor, title: "Outdoor Play", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: largeimg },
+      { icon: lifeskills, title: "Life Skills", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: largeimg },
+      { icon: art, title: "Art & Craft", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: largeimg },
 
-  { icon: story, title: "Story Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3" },
-  { icon: rhyme, title: "Rhyme Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3" },
-  { icon: music, title: "Music Session", bgColor: "#a5c9f1", iconBg: "#8ab6e3" },
-];
-
+      { icon: story, title: "Story Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: largeimg },
+      { icon: rhyme, title: "Rhyme Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: largeimg },
+      { icon: music, title: "Music Session", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: largeimg },
+    ];
 
     return (
       <Fragment>
-        
         <div className="container my-5">
           {/* ===== HEADER SECTION ===== */}
           <div className="section-head text-center mb-5">
@@ -76,8 +80,8 @@ class ClassDetailContent extends Component {
                   className="img-fluid w-100 h-100"
                   style={{
                     objectFit: "cover",
-                    border: "7px solid #48af53",   // ✅ green box border
-      borderRadius: "16px", 
+                    border: "7px solid #48af53",
+                    borderRadius: "16px",
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)",
                     minHeight: "450px",
                   }}
@@ -158,53 +162,10 @@ class ClassDetailContent extends Component {
                   emotionally, and academically through hands-on experiences.
                 </p>
               </div>
-
-              {/* Badges */}
-              {/* <div className="d-flex flex-wrap gap-3">
-                <span
-                  style={{
-                    backgroundColor: "#48af53",
-                    color: "white",
-                    padding: "10px 20px",
-                    borderRadius: "6px",
-                    fontSize: "14px",
-                    fontWeight: "600",
-                    display: "inline-block",
-                  }}
-                >
-                  Montessori Based
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "#48af53",
-                    color: "white",
-                    padding: "10px 20px",
-                    borderRadius: "6px",
-                    fontSize: "14px",
-                    fontWeight: "600",
-                    display: "inline-block",
-                  }}
-                >
-                  Playway Integrated
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "#48af53",
-                    color: "white",
-                    padding: "10px 20px",
-                    borderRadius: "6px",
-                    fontSize: "14px",
-                    fontWeight: "600",
-                    display: "inline-block",
-                  }}
-                >
-                  NEP 2020 + NCF
-                </span>
-              </div> */}
             </div>
           </div>
 
-          {/* ===== DAILY SCHEDULE SECTION ===== */}
+          {/* ===== DAILY SCHEDULE SECTION (ANIMATED CARDS) ===== */}
           <div className="mt-5">
             <div className="section-head text-center mb-4">
               <h2
@@ -230,68 +191,116 @@ class ClassDetailContent extends Component {
             </div>
 
             <div className="row mt-4">
-  {scheduleItems.map((item, index) => (
-    <div key={index} className="col-lg-4 col-md-6 mb-4">
+              {scheduleItems.map((item, index) => {
+                // Determine if this card should be expanded
+                // It is expanded if:
+                // 1. It is currently being hovered OR
+                // 2. Nothing is hovered AND it is one of the first 3 items (0, 1, 2)
+                const isHovered = this.state.hoveredIndex === index;
+                const isDefaultOpen = this.state.hoveredIndex === null && index < 3;
+                const isExpanded = isHovered || isDefaultOpen;
 
-      <div
-        className="p-3 d-flex align-items-center"
-        style={{
-          backgroundColor: item.bgColor,
-          borderRadius: "12px",
-          boxShadow: "0 3px 10px rgba(0, 0, 0, 0.1)",
-          transition: "all 0.3s ease",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-5px)";
-          e.currentTarget.style.boxShadow =
-            "0 6px 20px rgba(0, 0, 0, 0.15)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0)";
-          e.currentTarget.style.boxShadow =
-            "0 3px 10px rgba(0, 0, 0, 0.1)";
-        }}
-      >
+                return (
+                  <div key={index} className="col-lg-4 col-md-6 mb-4">
+                    <div
+                      className="d-flex flex-column"
+                      style={{
+                        backgroundColor: item.bgColor,
+                        borderRadius: "12px",
+                        boxShadow: isExpanded
+                          ? "0 8px 25px rgba(0,0,0,0.15)"
+                          : "0 3px 10px rgba(0,0,0,0.1)",
+                        transition: "all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
+                        overflow: "hidden",
+                        cursor: "pointer",
+                        height: isExpanded ? "280px" : "80px", // Animates height
+                        position: "relative",
+                      }}
+                      onMouseEnter={() => this.setState({ hoveredIndex: index })}
+                      onMouseLeave={() => this.setState({ hoveredIndex: null })}
+                    >
+                      {/* --- Header Part (Icon + Title) --- */}
+                      <div
+                        className="d-flex align-items-center p-3"
+                        style={{
+                          height: "80px", // Fixed height for header part
+                          width: "100%",
+                          zIndex: 2,
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "50px",
+                            height: "50px",
+                            backgroundColor: item.iconBg,
+                            borderRadius: "10px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginRight: "15px",
+                            flexShrink: 0,
+                          }}
+                        >
+                          <img
+                            src={item.icon}
+                            alt={item.title}
+                            style={{
+                              width: "28px",
+                              filter: "brightness(0) invert(1)",
+                            }}
+                          />
+                        </div>
+                        <h6
+                          style={{
+                            color: "#fff",
+                            fontSize: "18px",
+                            fontWeight: "700",
+                            marginBottom: 0,
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {item.title}
+                        </h6>
+                      </div>
 
-        <div
-          style={{
-            width: "55px",
-            height: "55px",
-            backgroundColor: item.iconBg,
-            borderRadius: "10px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginRight: "15px",
-            flexShrink: 0,
-          }}
-        >
-          <img
-            src={item.icon}
-            alt={item.title}
-            style={{
-              width: "30px",
-              filter: "brightness(0) invert(1)",
-            }}
-          />
-        </div>
-
-        <h6
-          style={{
-            color: "#fff",
-            fontSize: "16px",
-            fontWeight: "700",
-            marginBottom: 0,
-          }}
-        >
-          {item.title}
-        </h6>
-
-      </div>
-    </div>
-  ))}
-</div>
-
+                      {/* --- Image Part (Revealed on Expand) --- */}
+                      <div
+                        style={{
+                          flex: 1,
+                          opacity: isExpanded ? 1 : 0,
+                          transition: "opacity 0.3s ease-in 0.1s", // Delayed fade in
+                          padding: "0 15px 15px 15px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          height: "200px", // Remaining height
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            borderRadius: "8px",
+                            overflow: "hidden",
+                            backgroundColor: "rgba(255,255,255,0.2)", // Subtle placeholder bg
+                          }}
+                        >
+                          <img
+                            src={item.img}
+                            alt={item.title}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </Fragment>

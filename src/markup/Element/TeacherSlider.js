@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import team1 from "./../../images/team/Teachers.jpg";
+import team1 from "./../../images/team/Teacherss.jpg";
 // import team2 from "./../../images/team/pic2.jpg";
 // import team3 from "./../../images/team/pic3.jpg";
 // import team4 from "./../../images/team/pic4.jpg";
