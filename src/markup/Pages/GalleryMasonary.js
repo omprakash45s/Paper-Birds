@@ -78,6 +78,7 @@ const galleryBlog = [
   { images: masonary32 },
 ];
 // Masonry section
+//hahaha
 const masonryOptions = {
   transitionDuration: 0,
 };
