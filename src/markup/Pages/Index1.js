@@ -694,69 +694,108 @@ class Index1 extends Component {
     </div>
     
     <div className="row">
-      {iconBlog.map((data, index) => (
-        <div
-          className="col-lg-3 col-md-6 col-sm-6 col-12"
-          key={index}
-        >
-          <div className="icon-bx-wraper sr-iconbox m-b20">
-            <div className="icon-lg m-b20">
-              <Link to={"#"} className="icon-cell">
-                <img 
-                  src={data.image} 
-                  alt={data.alt} 
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                />
-              </Link>
-            </div>
-            <div className="icon-content">
-              <h3 
-                className="dlab-tilte" 
-                style={{ 
-                  fontSize: "18px", 
-                  color: "#333",
-                  fontWeight: "600",
-                  lineHeight: "1.4"
-                }}
-              >
-                {data.title1}
-                <br />
-                {data.title2}
-              </h3>
-            </div>
-          </div>
+  {iconBlog.map((data, index) => (
+    <div
+      // Added mb-4 for vertical spacing on mobile
+      className="col-lg-3 col-md-6 col-sm-6 col-12 mb-4" 
+      key={index}
+    >
+      <div 
+        className="icon-bx-wraper sr-iconbox m-b20 h-100 text-center" // Added h-100 and text-center
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center", // Ensures icon is centered
+            justifyContent: "flex-start"
+        }}
+      >
+        <div className="icon-lg m-b20">
+          <Link to={"#"} className="icon-cell">
+            <img 
+              src={data.image} 
+              alt={data.alt} 
+              loading="lazy"
+              width="60"
+              height="60"
+              style={{ objectFit: 'contain' }} // Ensures icon doesn't get squashed
+            />
+          </Link>
         </div>
-      ))}
+        <div className="icon-content">
+          <h3 
+            className="dlab-tilte" 
+            style={{ 
+              fontSize: "18px", 
+              color: "#333",
+              fontWeight: "600",
+              lineHeight: "1.4",
+              margin: 0 // Remove default margin to keep spacing tight
+            }}
+          >
+            {data.title1}
+            {/* Added a check: only render BR if title2 exists to avoid awkward gaps */}
+            {data.title2 && <br />} 
+            {data.title2}
+          </h3>
+        </div>
+      </div>
     </div>
+  ))}
+</div>
 
     {/* CTA Section */}
     <div className="text-center mt-5">
-      <p style={{ fontSize: "20px", color: "#333", marginBottom: "20px", fontWeight: "500" }}>
-        Book a Campus Tour Today!
-      </p>
-      <a 
-        href="tel:+919845127859"
-        className="btn"
-        style={{
-          backgroundColor: "#48af53",
-          color: "white",
-          padding: "12px 30px",
-          borderRadius: "30px",
-          fontWeight: "600",
-          fontSize: "18px",
-          textDecoration: "none",
-          display: "inline-block",
-          transition: "all 0.3s ease"
-        }}
-        onMouseOver="this.style.backgroundColor='#3d9646'; this.style.transform='scale(1.05)'"
-        onMouseOut="this.style.backgroundColor='#48af53'; this.style.transform='scale(1)'"
-        aria-label="Call for admission inquiry"
-      >
-        📞 Call Now: 98451 27859
-      </a>
-    </div>
+  <p
+    style={{
+      fontSize: "20px",
+      color: "#333",
+      marginBottom: "20px",
+      fontWeight: "500",
+    }}
+  >
+    Book a Campus Tour Today!
+  </p>
+  <a
+    href="tel:+919845127859"
+    className="btn"
+    style={{
+      backgroundColor: "#48af53",
+      color: "white",
+      padding: "12px 30px",
+      borderRadius: "30px",
+      fontWeight: "600",
+      fontSize: "18px",
+      textDecoration: "none",
+      display: "inline-flex", // Changed to inline-flex for alignment
+      alignItems: "center",   // Centers the icon and text vertically
+      gap: "10px",            // Adds space between icon and text
+      transition: "all 0.3s ease",
+    }}
+    // React requires functions for events, not strings like HTML
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = "#3d9646";
+      e.currentTarget.style.transform = "scale(1.05)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = "#48af53";
+      e.currentTarget.style.transform = "scale(1)";
+    }}
+    aria-label="Call for admission inquiry"
+  >
+    {/* Replaced emoji with the imported call SVG */}
+    <img 
+      src={call} 
+      alt="Call" 
+      style={{ 
+        width: "20px", 
+        height: "20px", 
+        // If your SVG is black, uncomment the line below to make it white:
+        // filter: "brightness(0) invert(1)" 
+      }} 
+    />
+    Call Now: 98451 27859
+  </a>
+</div>
   </div>
 </div>
             {/*  About Us End*/}
@@ -1049,7 +1088,7 @@ class Index1 extends Component {
                     Our Montessori Certified Teachers
                   </h2>
                   <p style={{ maxWidth: "900px", margin: "0 auto" }}>
-                    Our teachers at Paper Bird Shishukul, Indiranagar are well
+                    Our teachers at Paper Bird Shishukul, Whitefeild & Indiranagar are well
                     qualified, trained and experienced with college degrees. They
                     have additional degrees in Early Child Education (ECE),
                     Montessori and NTT diploma. Teacher ratio is 12:1. Teacher

@@ -12,7 +12,7 @@ import PageTitle from "../Layout/PageTitle";
 //images
 import masonary1 from "./../../images/pbsImages/img1.jpg";
 import masonary2 from "./../../images/pbsImages/img2.jpg";
-import masonary3 from "./../../images/pbsImages/img3.jpg";
+// import masonary3 from "./../../images/pbsImages/img3.jpg";
 import masonary4 from "./../../images/pbsImages/img4.jpg";
 import masonary5 from "./../../images/pbsImages/img5.jpg";
 import masonary6 from "./../../images/pbsImages/img6.jpg";
@@ -42,11 +42,27 @@ import masonary29 from "./../../images/pbsImages/img29.jpg";
 import masonary30 from './../../images/gallery/pic77.jpg';
 import masonary31 from './../../images/gallery/pic88.jpg';
 import masonary32 from './../../images/gallery/pic99.jpg';
+import masonary33 from './../../images/gallery/pic100.JPG';
+import masonary34 from './../../images/gallery/abc.jpg';
+import masonary35 from './../../images/gallery/kk.JPG';
+import masonary36 from './../../images/gallery/a.JPG';
+import masonary37 from './../../images/gallery/b.JPG';
+import masonary38 from './../../images/gallery/c.JPG';
+import masonary39 from './../../images/gallery/d.JPG';
+import masonary40 from './../../images/gallery/e.jpg';
+import masonary41 from './../../images/gallery/f.jpg';  
+import masonary42 from './../../images/gallery/g.JPG';
+import masonary43 from './../../images/gallery/h.jpg';
+
+
+
+
+
 
 const galleryBlog = [
   { images: masonary1 },
   { images: masonary2 },
-  { images: masonary3 },
+  // { images: masonary3 },
   { images: masonary4 },
   { images: masonary5 },
   { images: masonary6 },
@@ -76,29 +92,76 @@ const galleryBlog = [
   { images: masonary30 },
   { images: masonary31 },
   { images: masonary32 },
+  { images: masonary33 },
+  { images: masonary34 },
+  { images: masonary35 },
+  { images: masonary36 },
+  { images: masonary37 },
+  { images: masonary38 },
+  { images: masonary39 },
+  { images: masonary40 },
+  { images: masonary41 },
+  { images: masonary42 },
+  { images: masonary43 },
 ];
-// Masonry section
-//hahaha
+
 const masonryOptions = {
   transitionDuration: 0,
 };
-const imagesLoadedOptions = { background: ".my-bg-image-el" };
-// Masonry section end
 
-//Light Gallery Icon
-const Iconimage = (props) => {
+const imagesLoadedOptions = { background: ".my-bg-image-el" };
+
+// 1. STYLE OBJECTS
+// We use these styles to force the standard size and clean layout
+const cardStyles = {
+    imageContainer: {
+        height: '280px', // Set your desired fixed height here
+        width: '100%',
+        overflow: 'hidden',
+        position: 'relative'
+    },
+    img: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover', // This creates the "thumbnail" effect without stretching
+        cursor: 'pointer',   // Shows the hand icon indicating it's clickable
+        transition: 'transform 0.3s ease'
+    }
+};
+
+// 2. REFACTORED COMPONENT
+// I moved the Image rendering INSIDE this component so we can use the useLightbox hook on the image click
+const GalleryItem = (props) => {
   const { openLightbox } = useLightbox();
+  
   return (
-    <Link
-      to={"#"}
-      onClick={(e) => {
-        e.preventDefault();
-        openLightbox(props.imageToOpen);
-      }}
-      className="check-km"
-    >
-      <i className="fa fa-search icon-bx-xs"></i>
-    </Link>
+    <div className="dlab-box frame-box m-b30">
+      <div className="dlab-thum dlab-img-overlay1" style={cardStyles.imageContainer}>
+        {/* Clickable Image */}
+        <img 
+            src={props.item.images} 
+            alt="" 
+            style={cardStyles.img} 
+            onClick={() => openLightbox(props.index)} 
+        />
+        
+        {/* Overlay with Icon */}
+        <div className="overlay-bx">
+          <div className="overlay-icon">
+            <Link
+              to={"#"}
+              onClick={(e) => {
+                e.preventDefault();
+                openLightbox(props.index);
+              }}
+              className="check-km"
+            >
+              <i className="fa fa-search icon-bx-xs"></i>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -115,6 +178,7 @@ class GalleryMasonary extends Component {
                 <div className="section-head text-center">
                   <h2 className="head-title text-secondry">Gallery</h2>
                 </div>
+                
                 <SimpleReactLightbox>
                   <SRLWrapper>
                     <div className="clearfix" id="lightgallery">
@@ -127,23 +191,15 @@ class GalleryMasonary extends Component {
                           options={masonryOptions}
                           disableImagesLoaded={false}
                           updateOnEachImageLoad={false}
-                          imagesLoadedOptions={imagesLoadedOptions} // default {}
+                          imagesLoadedOptions={imagesLoadedOptions}
                         >
                           {galleryBlog.map((item, index) => (
                             <li
-                              className="web design card-container col-lg-4 col-md-6 col-sm-6 "
+                              className="web design card-container col-lg-4 col-md-6 col-sm-6"
                               key={index}
                             >
-                              <div className="dlab-box frame-box m-b30">
-                                <div className="dlab-thum dlab-img-overlay1 ">
-                                  <img src={item.images} alt="" />
-                                  <div className="overlay-bx">
-                                    <div className="overlay-icon">
-                                      <Iconimage imageToOpen={index} />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                                {/* Pass item and index to our sub-component */}
+                                <GalleryItem item={item} index={index} />
                             </li>
                           ))}
                         </Masonry>
@@ -151,6 +207,7 @@ class GalleryMasonary extends Component {
                     </div>
                   </SRLWrapper>
                 </SimpleReactLightbox>
+                
               </div>
             </div>
           </div>
