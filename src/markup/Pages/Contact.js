@@ -138,7 +138,7 @@ const Contact = (props) => {
                       Phone
                     </h4>
                     <p style={{ fontSize: "15px", color: "white", margin: 0, lineHeight: "1.8", fontWeight: "500" }}>
-                      +91 9741563692<br />
+                    
                       +91 98451 27859
 
                     </p>

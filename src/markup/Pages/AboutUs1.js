@@ -14,7 +14,7 @@ import VideoPopup from "../Element/VideoPopup";
 import bnr1 from "./../../images/line2.png";
 import bnr2 from "./../../images/background/bg5.jpg";
 import bgimg2 from "./../../images/background/bg1.jpg";
-import about from "./../../images/about/Founder.jpg"; // Malini Image
+import about from "./../../images/malini.jpg"; // Malini Image
 import latha from "./../../images/latha.jpeg"; // Latha Image
 
 import gallery1 from "./../../images/gallery/img5.jpg";
@@ -140,58 +140,59 @@ class AboutUs1 extends Component {
             >
               <div className="container">
                 {/* --- FOUNDER SECTION --- */}
-                <div className="row">
-                  <div className="col-lg-6 col-md-12 col-sm-12 m-b15">
-                    <div className="section-head">
-                      {/* Founder's Note Heading */}
-                      <h2
-                        className="head-title text-secondry"
-                        style={{ color: "#48af53" }}
-                      >
-                        Founder's Note
-                      </h2>
-                      <h5 style={{ color: "#48af53", fontWeight: "600" }}>
-                        Mrs. Malini Selvarajan (B.Ed & MBA)
-                      </h5>
-                      
-                      {/* Founder's Content */}
-                      <div className="text-justify" style={{ color: "#555", lineHeight: "1.8" }}>
-                        <p>
-                          For more than a decade, I have been a part of the education system, and my journey into early childhood education began with a deep love for children and a desire to create something meaningful for them. When I envisioned this preschool, I wanted it to feel like a second home—safe, warm, and emotionally comforting—where every child is supported, understood, and free to grow at their own pace.
-                        </p>
-                        <p>
-                          Over the years, I have had the privilege of guiding more than 590 families, standing beside parents through every stage of their child's early development. This experience has strengthened my belief that the foundation we lay in these tender years shapes a child's confidence, curiosity, and overall well-being.
-                        </p>
-                        <p>
-                          I have poured my heart and soul into building a preschool environment that celebrates each child's individuality and nurtures their natural desire to explore. My deep admiration for Dr. Maria Montessori's philosophy continues to guide our approach, ensuring that every child experiences the joy of self-directed learning, independence, and discovery.
-                        </p>
-                        <p>
-                          It is my commitment to create a space where children feel loved, protected, and inspired every single day. Thank you for trusting us with the most precious part of your lives.
-                        </p>
-                      </div>
+               <div className="row align-items-center">
+  {/* Text Column */}
+  <div className="col-lg-6 col-md-12 col-sm-12 m-b15">
+    <div className="section-head">
+      {/* Founder's Note Heading */}
+      <h2
+        className="head-title text-secondry"
+        style={{ color: "#48af53" }}
+      >
+        Founder's Note
+      </h2>
+      <h5 style={{ color: "#48af53", fontWeight: "600", marginBottom: "20px" }}>
+        Mrs. Malini Selvarajan (B.Ed & MBA)
+      </h5>
 
-                      {/* Paper Bird Shishukul Info */}
-                      
-                    </div>
-                  </div>
+      {/* Founder's Content */}
+      <div className="text-justify" style={{ color: "#555", lineHeight: "1.8" }}>
+        <p>
+          For more than a decade, I have been a part of the education system, and my journey into early childhood education began with a deep love for children and a desire to create something meaningful for them. When I envisioned this preschool, I wanted it to feel like a second home—safe, warm, and emotionally comforting—where every child is supported, understood, and free to grow at their own pace.
+        </p>
+        <p>
+          Over the years, I have had the privilege of guiding more than 590 families, standing beside parents through every stage of their child's early development. This experience has strengthened my belief that the foundation we lay in these tender years shapes a child's confidence, curiosity, and overall well-being.
+        </p>
+        <p>
+          I have poured my heart and soul into building a preschool environment that celebrates each child's individuality and nurtures their natural desire to explore. My deep admiration for Dr. Maria Montessori's philosophy continues to guide our approach, ensuring that every child experiences the joy of self-directed learning, independence, and discovery.
+        </p>
+        <p>
+          It is my commitment to create a space where children feel loved, protected, and inspired every single day. Thank you for trusting us with the most precious part of your lives.
+        </p>
+      </div>
+    </div>
+  </div>
 
-                  {/* Founder Image */}
-                  <div className="col-lg-6 col-md-12 col-sm-12 teacher-content">
-                    <div className="split-box">
-                      <div className="about-media">
-                        <img 
-                          src={about} 
-                          alt="Mrs. Malini Selvarajan" 
-                          style={{
-                            border: "3px solid #48af53",
-                            borderRadius: "16px",
-                            boxShadow: "0 8px 30px rgba(0,0,0,0.1)"
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  {/* Founder Image Column */}
+  <div className="col-lg-6 col-md-12 col-sm-12 teacher-content">
+    <div className="split-box">
+      <div className="about-media">
+        <img
+          src={about}
+          alt="Mrs. Malini Selvarajan"
+          className="img-fluid"
+          style={{
+            width: "100%", // Ensures it fills the column width
+            border: "4px solid #48af53", // Slightly thicker border for definition
+            borderRadius: "20px", // Smoother, modern radius
+            boxShadow: "0 10px 40px rgba(72, 175, 83, 0.2)", // Softer, colored shadow for depth
+            objectFit: "cover" // Ensures image scales nicely
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</div>
                 {/* --- PAPER BIRD SHISHUKUL SECTION (Image Left, Text Right) --- */}
 <div className="row align-items-center m-t60">
   
@@ -438,7 +439,7 @@ class AboutUs1 extends Component {
         <div style={{ width: "60px", height: "3px", background: "#1877F2", marginBottom: "20px" }}></div>
         
         <p style={{ color: "#555", lineHeight: "1.7", textAlign: "justify" }}>
-          We are thrilled to bring the Paper Bird philosophy to Whitefield! Our newest campus is a state-of-the-art facility designed to provide the same home-like environment, premium Montessori infrastructure, and dedicated care that parents have trusted for years. A fresh beginning for your little one's journey.
+          We are thrilled to bring the Paper Bird Shishukul philosophy to Whitefield! Our newest campus is a state-of-the-art facility designed to provide the same home-like environment, premium Montessori infrastructure, and dedicated care that parents have trusted for years. A fresh beginning for your little one's journey.
         </p>
         
         <div style={{ marginTop: "25px", color: "#1877F2", fontWeight: "600", fontSize: "14px" }}>

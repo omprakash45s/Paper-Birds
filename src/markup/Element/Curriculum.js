@@ -12,6 +12,19 @@ import art from "./../../images/art.svg";
 import story from "./../../images/story.svg";
 import rhyme from "./../../images/rhyme.svg";
 import music from "./../../images/music.svg";
+import p from "./../../images/blog/large/prayer.JPG";
+import y from "./../../images/blog/large/Yoga.jpg";
+import d from "./../../images/blog/large/Dance.JPG";
+import c from "./../../images/blog/large/circle.jpg";
+import concept from "./../../images/blog/large/concept.JPG";
+import snacksimg from "./../../images/blog/large/Snackss.JPG";
+import o from "./../../images/blog/large/Outdoor.jpg";  
+import ls from "./../../images/blog/large/ls.JPG";
+import artt from "./../../images/blog/large/artt.JPG";
+import storyy from "./../../images/blog/large/storyy.png";
+import rhy from "./../../images/blog/large/rhy.png";
+import mu from "./../../images/blog/large/mu.png";
+import maria from "./../../images/blog/large/maria.JPG";
 
 class ClassDetailContent extends Component {
   constructor(props) {
@@ -23,21 +36,21 @@ class ClassDetailContent extends Component {
 
   render() {
     const scheduleItems = [
-      { icon: prayer, title: "Prayer", bgColor: "#b8d88e", iconBg: "#a5c97b", img: largeimg },
-      { icon: yoga, title: "Yoga", bgColor: "#b8d88e", iconBg: "#a5c97b", img: largeimg },
-      { icon: dance, title: "Dance", bgColor: "#b8d88e", iconBg: "#a5c97b", img: largeimg },
+      { icon: prayer, title: "Prayer", bgColor: "#b8d88e", iconBg: "#a5c97b", img: c },
+      { icon: yoga, title: "Yoga", bgColor: "#b8d88e", iconBg: "#a5c97b", img: y },
+      { icon: dance, title: "Dance", bgColor: "#b8d88e", iconBg: "#a5c97b", img: d },
 
-      { icon: circle, title: "Circle Time", bgColor: "#ffc570", iconBg: "#ffb347", img: largeimg },
-      { icon: learning, title: "Concept Learning", bgColor: "#ffc570", iconBg: "#ffb347", img: largeimg },
-      { icon: snacks, title: "Snacks Time", bgColor: "#ffc570", iconBg: "#ffb347", img: largeimg },
+      { icon: circle, title: "Circle Time", bgColor: "#ffc570", iconBg: "#ffb347", img: p },
+      { icon: learning, title: "Concept Learning", bgColor: "#ffc570", iconBg: "#ffb347", img: concept },
+      { icon: snacks, title: "Snacks Time", bgColor: "#ffc570", iconBg: "#ffb347", img: snacksimg },
 
-      { icon: outdoor, title: "Outdoor Play", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: largeimg },
-      { icon: lifeskills, title: "Life Skills", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: largeimg },
-      { icon: art, title: "Art & Craft", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: largeimg },
+      { icon: outdoor, title: "Outdoor Play", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: o },
+      { icon: lifeskills, title: "Life Skills", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: ls },
+      { icon: art, title: "Art & Craft", bgColor: "#f5a5b8", iconBg: "#ea8fa5", img: artt },
 
-      { icon: story, title: "Story Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: largeimg },
-      { icon: rhyme, title: "Rhyme Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: largeimg },
-      { icon: music, title: "Music Session", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: largeimg },
+      { icon: story, title: "Story Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: storyy },
+      { icon: rhyme, title: "Rhyme Time", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: rhy },
+      { icon: music, title: "Music Session", bgColor: "#a5c9f1", iconBg: "#8ab6e3", img: mu },
     ];
 
     return (
@@ -75,7 +88,7 @@ class ClassDetailContent extends Component {
             <div className="col-lg-5">
               <div className="position-relative h-100">
                 <img
-                  src={largeimg}
+                  src={maria}
                   alt="Our Curriculum"
                   className="img-fluid w-100 h-100"
                   style={{

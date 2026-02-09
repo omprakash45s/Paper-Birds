@@ -12,6 +12,7 @@ import FloatingEnquiry from "./FloatingEnquiry";
 import InstagramFeed from "../Element/InstagramFeed";
 import SEO from "../../components/SEO";
 import largeimg from "./../../images/blog/large/Curriculum.jpg";
+import vision from "./../../images/blog/large/v.jpg";
 import {
   OrganizationSchema,
   LocalBusinessSchema,
@@ -217,7 +218,7 @@ class Index1 extends Component {
               lineHeight: "1.4"
             }}
           >
-            Paper Bird Promise
+            Paper Bird Shishukul's Promise
           </h2>
           
           <p style={{ 
@@ -852,7 +853,7 @@ class Index1 extends Component {
     {/* RIGHT — IMAGE */}
     <div className="col-lg-5 col-md-12 text-center">
   <img
-    src={largeimg}
+    src={vision}
     alt="Paper Bird Shishukul Classroom"
     className="img-fluid rounded-4 shadow-lg"
     style={{

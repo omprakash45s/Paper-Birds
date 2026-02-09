@@ -6,11 +6,11 @@ import PageTitle from "../Layout/PageTitle";
 
 // Images
 import bnr1 from "./../../images/line2.png"; // Background Pattern
-import clsimg1 from "./../../images/classes/Toddler.jpg"; // Playgroup
-import clsimg2 from "./../../images/classes/Daycare.jpg"; // Daycare
-import clsimg3 from "./../../images/classes/Nursery.jpg"; // EY M1
-import clsimg4 from "./../../images/classes/LKG.jpg";     // EY M2
-import clsimg5 from "./../../images/classes/UKG.jpg";     // EY M3
+import clsimg1 from "./../../images/classes/tod.png"; // Playgroup
+import clsimg2 from "./../../images/classes/day.png"; // Daycare
+import clsimg3 from "./../../images/classes/m1.jpg"; // EY M1
+import clsimg4 from "./../../images/classes/m2.png";     // EY M2
+import clsimg5 from "./../../images/classes/m3.png";     // EY M3
 
 const classesData = [
   {
@@ -19,7 +19,7 @@ const classesData = [
     age: "20 months – 36 months",
     time: "9:00 am – 12:00 pm",
     size: "14 children",
-    description: "This is often a child’s first step away from home, making it a crucial foundational phase. At Paper Bird, we ensure a smooth, emotionally supported transition, where school and parents share equal responsibility.",
+    description: "This is often a child’s first step away from home, making it a crucial foundational phase. At Paper Bird Shishukul, we ensure a smooth, emotionally supported transition, where school and parents share equal responsibility.",
     points: [
       "Strong focus on exploration and communication",
       "Individual attention for emotional comfort and adaptability",
@@ -29,22 +29,7 @@ const classesData = [
     color: "#ffc570", // Yellow
     accent: "#ef6c00"
   },
-  {
-    image: clsimg2,
-    title: "Daycare",
-    age: "2 years – 8 years",
-    time: "12:00 pm – 5:30 pm",
-    size: "Flexible",
-    description: "Our Daycare is a 'home away from home' designed to provide a safe, nurturing, and engaging environment for children after school hours. We focus on relaxation, social interaction, and constructive play.",
-    points: [
-      "Safe, hygienic, and CCTV-monitored environment",
-      "Structured schedule with time for rest, snacks, and play",
-      "Engaging activities like storytelling, art, and free play",
-      "Caring support staff to attend to individual needs"
-    ],
-    color: "#ffb74d", // Orange
-    accent: "#f57c00"
-  },
+  
   {
     image: clsimg3,
     title: "Early Years (EY) M1",
@@ -94,6 +79,22 @@ const classesData = [
     ],
     color: "#b8d88e", // Green
     accent: "#2e7d32"
+  },
+  {
+    image: clsimg2,
+    title: "Daycare",
+    age: "1 years – 8 years",
+    time: "12:00 pm – 5:30 pm",
+    size: "Flexible",
+    description: "Our Daycare is a 'home away from home' designed to provide a safe, nurturing, and engaging environment for children after school hours. We focus on relaxation, social interaction, and constructive play.",
+    points: [
+      "Safe, hygienic, and CCTV-monitored environment",
+      "Structured schedule with time for rest, snacks, and play",
+      "Engaging activities like storytelling, art, and free play",
+      "Caring support staff to attend to individual needs"
+    ],
+    color: "#ffb74d", // Orange
+    accent: "#f57c00"
   }
 ];
 

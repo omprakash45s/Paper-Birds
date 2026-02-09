@@ -3,20 +3,20 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import bnr1 from "./../../images/main-slider/s1.png";
 import bnr2 from "./../../images/main-slider/s2.png";
-import bnr3 from "./../../images/main-slider/s3.png";
+// import bnr3 from "./../../images/main-slider/s3.png";
 import Carousel from "react-bootstrap/Carousel";
 
 //Mobile
-import bnr1Mob from "./../../images/main-slider/s1.png";
-import bnr2Mob from "./../../images/main-slider/Slide02Mob.jpg";
-import bnr3Mob from "./../../images/main-slider/Slide03Mob.jpg";
+import bnr1Mob from "./../../images/main-slider/7.png";
+import bnr2Mob from "./../../images/main-slider/8.png";
+// import bnr3Mob from "./../../images/main-slider/Slide03Mob.jpg";
 
-const carouselBlog = [{ image: bnr1 }, { image: bnr2 }, { image: bnr3 }];
+const carouselBlog = [{ image: bnr1 }, { image: bnr2 } /*, { image: bnr3 }*/];
 
 const carouselBlogMob = [
   { image: bnr1Mob },
   { image: bnr2Mob },
-  { image: bnr3Mob },
+  // { image: bnr3Mob },
 ];
 
 const BannerSlider = () => {

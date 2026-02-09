@@ -652,11 +652,11 @@ class JobDescription extends Component {
                           📧 Email Your CV
                         </a>
                         <a 
-                          href="tel:+919741563692" 
+                          href="tel:+919845127859" 
                           className="btn btn-lg radius-xl" 
                           style={{ backgroundColor: "#48af53", color: "white", padding: "15px 40px", marginBottom: "10px" }}
                         >
-                          📞 Call Us: 097415 63692
+                          📞 Call Us: 098451 27859
                         </a>
                       </div>
                     </div>

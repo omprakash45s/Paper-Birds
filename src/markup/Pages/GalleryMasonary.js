@@ -53,6 +53,13 @@ import masonary40 from './../../images/gallery/e.jpg';
 import masonary41 from './../../images/gallery/f.jpg';  
 import masonary42 from './../../images/gallery/g.JPG';
 import masonary43 from './../../images/gallery/h.jpg';
+import masonary44 from './../../images/gallery/gal.jpg';
+import masonary45 from './../../images/gallery/ab.JPG';
+import masonary46 from './../../images/gallery/kkk.JPG';
+
+
+
+
 
 
 
@@ -103,6 +110,9 @@ const galleryBlog = [
   { images: masonary41 },
   { images: masonary42 },
   { images: masonary43 },
+  { images: masonary44 },
+  { images: masonary45 },
+  { images: masonary46 },
 ];
 
 const masonryOptions = {

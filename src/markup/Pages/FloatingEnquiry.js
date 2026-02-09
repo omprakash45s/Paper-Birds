@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 const FloatingEnquiryForm = () => {
   const schoolId = "Ihspm6Py6i";
   const enquiryFor = [
-    "Toddlers Program",
     "Daycare",
-    "Nursery",
-    "LKG",
-    "UKG",
-    "Montessori",
+    "Toddlers(Playgroup)",
+    "EY M1",
+    "EY M2",
+    "EY M3",
+    
   ];
   const parents = ["Father", "Mother"];
   

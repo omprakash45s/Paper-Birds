@@ -5,7 +5,7 @@ export default class ThemeButton extends Component {
     return (
       <div className="fixedButton">
         <a
-          href="https://wa.me/919741563692"
+          href="https://wa.me/+919845127859"
           target="_blank"
           class="  theme-btn  bt-whatsapp"
         >
