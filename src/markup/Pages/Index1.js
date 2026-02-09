@@ -12,7 +12,7 @@ import FloatingEnquiry from "./FloatingEnquiry";
 import InstagramFeed from "../Element/InstagramFeed";
 import SEO from "../../components/SEO";
 import largeimg from "./../../images/blog/large/Curriculum.jpg";
-import vision from "./../../images/blog/large/v.jpg";
+// import vision from "./../../images/blog/large/v.jpg";
 import {
   OrganizationSchema,
   LocalBusinessSchema,

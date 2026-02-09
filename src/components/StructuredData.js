@@ -105,6 +105,39 @@ export const OrganizationSchema = () => {
     </Helmet>
   );
 };
+export const WhitefieldBusinessSchema = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Paper Bird Shishukul Montessori - Whitefield",
+    "image": "https://paperbirdshishukul.com/logo512.png",
+    "description": "Montessori preschool and daycare in Whitefield, Bengaluru",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Whitefield, Bengaluru",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560066",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "12.9698",
+      "longitude": "77.7499"
+    },
+    "url": "https://paperbirdshishukul.com",
+    "telephone": "+91-9841567859",
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
 
 export const JobPostingSchema = ({ job, jobId }) => {
   const schema = {
