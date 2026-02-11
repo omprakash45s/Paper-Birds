@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 const FloatingEnquiryForm = () => {
-  const schoolId = "Ihspm6Py6i";
+  const schoolId = "HMa5CoEiDB";
   const enquiryFor = [
     "Daycare",
     "Toddlers(Playgroup)",
     "EY M1",
     "EY M2",
     "EY M3",
-    
+
   ];
   const parents = ["Father", "Mother"];
-  
+
   const [isVisible, setIsVisible] = useState(false);
   const [onSave, setOnSave] = useState(false);
   const [error, setError] = useState(undefined);
@@ -162,7 +162,7 @@ const FloatingEnquiryForm = () => {
 
   if (!isVisible) return null;
 
- const styles = {
+  const styles = {
     overlay: {
       position: 'fixed',
       top: 0,
@@ -219,7 +219,7 @@ const FloatingEnquiryForm = () => {
       fontSize: '32px',
       fontWeight: '700',
       // Updated: Baby Pink Text
-      color: '#FF91A4', 
+      color: '#FF91A4',
       margin: 0,
       letterSpacing: '-0.5px',
     },
@@ -311,19 +311,19 @@ const FloatingEnquiryForm = () => {
 
   return (
     <>
-      <div 
-        className="floating-enquiry-overlay" 
+      <div
+        className="floating-enquiry-overlay"
         style={styles.overlay}
         onClick={handleClose}
       />
-      
-      <div 
-        className="floating-enquiry-modal" 
+
+      <div
+        className="floating-enquiry-modal"
         style={styles.modal}
         onClick={(e) => e.stopPropagation()}
       >
-        <button 
-          className="floating-enquiry-close" 
+        <button
+          className="floating-enquiry-close"
           style={styles.closeButton}
           onClick={handleClose}
           aria-label="Close"
@@ -340,22 +340,22 @@ const FloatingEnquiryForm = () => {
             event.preventDefault();
             setEnquiryForError(false);
             setRelationError(false);
-            
+
             const enquiryForValue = event.target.elements.floatEnquiryFor.value;
             const relationValue = event.target.elements.floatRelation.value;
-            
+
             let hasError = false;
-            
+
             if (!enquiryFor.includes(enquiryForValue)) {
               setEnquiryForError(true);
               hasError = true;
             }
-            
+
             if (!parents.includes(relationValue)) {
               setRelationError(true);
               hasError = true;
             }
-            
+
             if (!hasError) {
               setOnSave(true);
               let enqObj = {

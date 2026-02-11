@@ -5,7 +5,7 @@ import Footer from "../Layout/Footer";
 import PageTitle from "../Layout/PageTitle";
 
 const Contact = (props) => {
-  const schoolId = "Ihspm6Py6i";
+  const schoolId = "HMa5CoEiDB";
   const enquiryFor = [
     "Daycare",
     "Toddlers(Playgroup)",
@@ -87,7 +87,7 @@ const Contact = (props) => {
               <div className="row m-b50">
                 {/* Phone Card */}
                 <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <div 
+                  <div
                     style={{
                       background: "linear-gradient(135deg, #b8d88e 0%, #9bc776 100%)",
                       padding: "40px 25px",
@@ -110,8 +110,8 @@ const Contact = (props) => {
                       e.currentTarget.style.boxShadow = "0 10px 30px rgba(184,216,142,0.3)";
                     }}
                   >
-                    <div 
-                      style={{ 
+                    <div
+                      style={{
                         width: "80px",
                         height: "80px",
                         borderRadius: "50%",
@@ -125,19 +125,19 @@ const Contact = (props) => {
                     >
                       <i className="ti-headphone-alt" style={{ fontSize: "40px", color: "#b8d88e" }}></i>
                     </div>
-                    <h4 
-                      className="dlab-tilte" 
-                      style={{ 
-                        color: "white", 
-                        marginBottom: "15px", 
-                        fontSize: "22px", 
-                        fontWeight: "700" 
+                    <h4
+                      className="dlab-tilte"
+                      style={{
+                        color: "white",
+                        marginBottom: "15px",
+                        fontSize: "22px",
+                        fontWeight: "700"
                       }}
                     >
                       Phone
                     </h4>
                     <p style={{ fontSize: "15px", color: "white", margin: 0, lineHeight: "1.8", fontWeight: "500" }}>
-                    
+
                       +91 98451 27859
 
                     </p>
@@ -146,7 +146,7 @@ const Contact = (props) => {
 
                 {/* Indiranagar Branch Card */}
                 <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <div 
+                  <div
                     style={{
                       background: "linear-gradient(135deg, #ffc570 0%, #ffb347 100%)",
                       padding: "40px 25px",
@@ -169,8 +169,8 @@ const Contact = (props) => {
                       e.currentTarget.style.boxShadow = "0 10px 30px rgba(255,197,112,0.3)";
                     }}
                   >
-                    <div 
-                      style={{ 
+                    <div
+                      style={{
                         width: "80px",
                         height: "80px",
                         borderRadius: "50%",
@@ -184,13 +184,13 @@ const Contact = (props) => {
                     >
                       <i className="ti-location-pin" style={{ fontSize: "40px", color: "#ffc570" }}></i>
                     </div>
-                    <h4 
-                      className="dlab-tilte" 
-                      style={{ 
-                        color: "white", 
-                        marginBottom: "15px", 
-                        fontSize: "22px", 
-                        fontWeight: "700" 
+                    <h4
+                      className="dlab-tilte"
+                      style={{
+                        color: "white",
+                        marginBottom: "15px",
+                        fontSize: "22px",
+                        fontWeight: "700"
                       }}
                     >
                       Indiranagar
@@ -203,7 +203,7 @@ const Contact = (props) => {
 
                 {/* Whitefield Branch Card */}
                 <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <div 
+                  <div
                     style={{
                       background: "linear-gradient(135deg, #f5a5b8 0%, #f28ba0 100%)",
                       padding: "40px 25px",
@@ -226,8 +226,8 @@ const Contact = (props) => {
                       e.currentTarget.style.boxShadow = "0 10px 30px rgba(245,165,184,0.3)";
                     }}
                   >
-                    <div 
-                      style={{ 
+                    <div
+                      style={{
                         width: "80px",
                         height: "80px",
                         borderRadius: "50%",
@@ -241,13 +241,13 @@ const Contact = (props) => {
                     >
                       <i className="ti-location-pin" style={{ fontSize: "40px", color: "#f5a5b8" }}></i>
                     </div>
-                    <h4 
-                      className="dlab-tilte" 
-                      style={{ 
-                        color: "white", 
-                        marginBottom: "15px", 
-                        fontSize: "22px", 
-                        fontWeight: "700" 
+                    <h4
+                      className="dlab-tilte"
+                      style={{
+                        color: "white",
+                        marginBottom: "15px",
+                        fontSize: "22px",
+                        fontWeight: "700"
                       }}
                     >
                        Borewell Road, Whitefield
@@ -260,7 +260,7 @@ const Contact = (props) => {
 
                 {/* Email Card */}
                 <div className="col-lg-3 col-md-6 col-sm-6 m-b30">
-                  <div 
+                  <div
                     style={{
                       background: "linear-gradient(135deg, #a5c9f1 0%, #8bb8ed 100%)",
                       padding: "40px 25px",
@@ -283,8 +283,8 @@ const Contact = (props) => {
                       e.currentTarget.style.boxShadow = "0 10px 30px rgba(165,201,241,0.3)";
                     }}
                   >
-                    <div 
-                      style={{ 
+                    <div
+                      style={{
                         width: "80px",
                         height: "80px",
                         borderRadius: "50%",
@@ -298,13 +298,13 @@ const Contact = (props) => {
                     >
                       <i className="ti-email" style={{ fontSize: "40px", color: "#a5c9f1" }}></i>
                     </div>
-                    <h4 
-                      className="dlab-tilte" 
-                      style={{ 
-                        color: "white", 
-                        marginBottom: "15px", 
-                        fontSize: "22px", 
-                        fontWeight: "700" 
+                    <h4
+                      className="dlab-tilte"
+                      style={{
+                        color: "white",
+                        marginBottom: "15px",
+                        fontSize: "22px",
+                        fontWeight: "700"
                       }}
                     >
                       Email Us
@@ -333,9 +333,9 @@ const Contact = (props) => {
                 {/* Indiranagar Map */}
                 <div className="col-md-6 m-b30">
                   <div className="map-container">
-                    <h4 
-                      className="text-center m-b20" 
-                      style={{ 
+                    <h4
+                      className="text-center m-b20"
+                      style={{
                         color: "#48af53",
                         fontSize: "22px",
                         fontWeight: "600"
@@ -346,8 +346,8 @@ const Contact = (props) => {
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.957411925554!2d77.63322837507648!3d12.974575787341083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16a7dde8405b%3A0x474eff279d2135a3!2sPaper%20Bird%20Shishukul!5e0!3m2!1sen!2sin!4v1697007968132!5m2!1sen!2sin"
                       className="align-self-stretch rounded-sm border-0"
-                      style={{ 
-                        width: "100%", 
+                      style={{
+                        width: "100%",
                         height: "400px",
                         border: "3px solid #48af53",
                         borderRadius: "12px"
@@ -361,9 +361,9 @@ const Contact = (props) => {
                 {/* Whitefield Map */}
                 <div className="col-md-6 m-b30">
                   <div className="map-container">
-                    <h4 
-                      className="text-center m-b20" 
-                      style={{ 
+                    <h4
+                      className="text-center m-b20"
+                      style={{
                         color: "#48af53",
                         fontSize: "22px",
                         fontWeight: "600"
@@ -374,8 +374,8 @@ const Contact = (props) => {
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5383947937243!2d77.74779307507698!3d12.999512987335686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f4cf6cd7a7%3A0x8ee9c5b084f1e4f6!2sAshton%20Park!5e0!3m2!1sen!2sin!4v1697007968132!5m2!1sen!2sin"
                       className="align-self-stretch rounded-sm border-0"
-                      style={{ 
-                        width: "100%", 
+                      style={{
+                        width: "100%",
                         height: "400px",
                         border: "3px solid #48af53",
                         borderRadius: "12px"

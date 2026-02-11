@@ -14063,3 +14063,29 @@ pre {
 	line-height: 28px;
 	color: #7b7b7b;
 }
+
+/* React Multi Carousel Custom Arrow Styling */
+.react-multiple-carousel__arrow {
+	background-color: #4CAF50 !important;
+	transition: all 0.3s ease;
+}
+
+.react-multiple-carousel__arrow:hover {
+	background-color: #ed5ab0 !important;
+}
+
+.react-multiple-carousel__arrow--left {
+	background-color: #4CAF50 !important;
+}
+
+.react-multiple-carousel__arrow--left:hover {
+	background-color: #ed5ab0 !important;
+}
+
+.react-multiple-carousel__arrow--right {
+	background-color: #4CAF50 !important;
+}
+
+.react-multiple-carousel__arrow--right:hover {
+	background-color: #ed5ab0 !important;
+}
