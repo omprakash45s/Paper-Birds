@@ -1,135 +1,117 @@
 import React, { Fragment, Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "./../../images/newlogo.png";
-import Blog1 from "./../../images/blog/recent-blog/pic1.jpg";
-import Blog2 from "./../../images/blog/recent-blog/pic2.jpg";
 
 class Footer extends Component {
   render() {
     return (
       <Fragment>
         <footer className="site-footer">
-          <div className="footer-top">
+          {/* --- Main Footer Section --- */}
+          <div className="footer-top" style={{ paddingBottom: "20px" }}>
             <div className="container wow fadeIn" data-wow-delay="0.5s">
-              <div className="row">
-                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 footer-col-4">
+              <div className="row justify-content-center">
+                <div className="col-12 text-center">
                   <div className="widget widget_ftabout">
-                    <div className="footer-logo" style={{ maxWidth: '200px', marginBottom: '15px' }}>
+                    {/* Centered Logo Wrapper */}
+                    <div
+                      className="footer-logo"
+                      style={{
+                        maxWidth: "350px", // Large Logo
+                        margin: "0 auto 30px auto", // Centered
+                        display: "block",
+                      }}
+                    >
                       <Link to={"./"}>
-                        <img src={logo} alt="" style={{ width: '100%', height: 'auto' }} />
+                        <img
+                          src={logo}
+                          alt="Paper Bird Shishukul"
+                          style={{ width: "100%", height: "auto" }}
+                        />
                       </Link>
                     </div>
-                    <p>
-                      Paper Bird Shishukul is a nurturing learning environment
-                      dedicated to fostering holistic development in young
-                      minds. With a blend of Montessori education principles and
-                      innovative teaching methods, we provide a stimulating and
-                      enriching experience for children.
-                    </p>
                   </div>
                 </div>
-                <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 footer-col-4">
+
+                {/* --- Quick Links (Now Black & Centered) --- */}
+                <div className="col-12 text-center">
                   <div className="widget widget_services border-0">
-                    <h5 className="footer-title" style={{ color: "#48af53" }}>
-                      Quick Links
-                    </h5>
-                    <ul className="list-2">
-                      <li>
-                        <Link to={"./"}>Home</Link>
+                    <ul
+                      className="list-inline"
+                      style={{ padding: 0, margin: "0 0 20px 0" }}
+                    >
+                      <li className="list-inline-item mx-3">
+                        <Link 
+                          to={"./"} 
+                          style={{ color: "#000000", fontWeight: "600" }}
+                        >
+                          Home
+                        </Link>
                       </li>
-                      <li>
-                        <Link to={"/about-1"}>About </Link>
+                      <li className="list-inline-item mx-3">
+                        <Link 
+                          to={"/about-1"} 
+                          style={{ color: "#000000", fontWeight: "600" }}
+                        >
+                          About
+                        </Link>
                       </li>
-                      {/* <li><Link to={"/faqs"}>Faq</Link></li>
-											<li><Link to={"/event"}>Event</Link></li>
-											<li><Link to={"/blog-details"}>Blog</Link></li> */}
-                      <li>
-                        <Link to={"/classes"}>Classes</Link>
+                      <li className="list-inline-item mx-3">
+                        <Link 
+                          to={"/classes"} 
+                          style={{ color: "#000000", fontWeight: "600" }}
+                        >
+                          Classes
+                        </Link>
                       </li>
-                      {/* <li>
-                        <Link to={"/teachers"}>Teachers</Link>
-                      </li> */}
-                      <li>
-                        <Link to={"/gallery-masonary"}>Gallery</Link>
+                      <li className="list-inline-item mx-3">
+                        <Link 
+                          to={"/gallery-masonary"} 
+                          style={{ color: "#000000", fontWeight: "600" }}
+                        >
+                          Gallery
+                        </Link>
                       </li>
-                      <li>
-                        <Link to={"/careers"}>Careers</Link>
+                      <li className="list-inline-item mx-3">
+                        <Link 
+                          to={"/careers"} 
+                          style={{ color: "#000000", fontWeight: "600" }}
+                        >
+                          Careers
+                        </Link>
                       </li>
-                      <li>
-                        <Link to={"/contact-us"}>Contact Us</Link>
+                      <li className="list-inline-item mx-3">
+                        <Link 
+                          to={"/contact-us"} 
+                          style={{ color: "#000000", fontWeight: "600" }}
+                        >
+                          Contact Us
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 </div>
-                {/* <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 footer-col-4">
-									<div className="widget recent-posts-entry">
-										<h5 className="footer-title">Recent Posts</h5>
-											<div className="widget-post-bx">
-												<div className="widget-post clearfix">
-													<div className="dlab-post-media"> <img src={Blog1} width="200" height="143" alt="" /> </div>
-													<div className="dlab-post-info">
-														<div className="dlab-post-header">
-															<h6 className="post-title"><Link to={"/blog-details"}>What It's Like Dating.</Link></h6>
-														</div>
-														<div className="dlab-post-meta">
-															<ul>
-																<li className="post-author">By Jone</li>
-																<li className="post-comment"><i className="fa fa-comments"></i> 28</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-												<div className="widget-post clearfix">
-													<div className="dlab-post-media"> <img src={Blog2} width="200" height="143" alt="" /> </div>
-													<div className="dlab-post-info">
-														<div className="dlab-post-header">
-															<h6 className="post-title"><Link to={"/blog-details"}>The Reasons Why We Love</Link></h6>
-														</div>
-														<div className="dlab-post-meta">
-															<ul>
-																<li className="post-author">By Marry</li>
-																<li className="post-comment"><i className="fa fa-comments"></i> 5</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-									</div>
-								</div> */}
-                {/* <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 footer-col-4 ">
-									<div className="widget">
-										<h5 className="footer-title">Newsletter</h5>
-										<div className="subscribe-form m-b20">
-											<form className="dzSubscribe" action="script/mailchamp.php" method="post">
-												<div className="dzSubscribeMsg"></div>
-												<div>
-													<input name="dzEmail" required="required"  className="form-control" placeholder="Your Email Address" type="email" />
-													<button name="submit" value="Submit" type="submit" className="btn btn-md radius-xl">Subscribe</button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div> */}
               </div>
             </div>
           </div>
-          {/*  footer bottom part  */}
+
+          {/* --- Footer Bottom --- */}
           <div className="footer-bottom">
             <div className="container">
-              <div className="row">
-                <div className="col-lg-6 col-md-8 col-sm-6 text-left ">
-                  {" "}
-                  <span>
-                    Copyright © 2026 Paper Bird Shishukul. All right reserved
-                  </span>{" "}
+              <div className="row align-items-center">
+                {/* Copyright Section */}
+                <div className="col-lg-6 col-md-6 text-md-left text-center">
+                  <span style={{ color: "#000" }}> {/* Ensure copyright is also readable */}
+                    Copyright © 2026 Paper Bird Shishukul. All rights reserved
+                  </span>
                 </div>
-                <div className="col-lg-6 col-md-4 col-sm-6 text-right ">
-                  {/* <ul className="list-inline">
-										<li><Link to={"#"} className="btn-link facebook circle mr-1"><i className="fa fa-facebook"></i></Link></li>
-										<li><Link to={"#"} className="btn-link google-plus circle mr-1"><i className="fa fa-google-plus"></i></Link></li>
-										<li><Link to={"#"} className="btn-link linkedin circle mr-1"><i className="fa fa-linkedin"></i></Link></li>
-										<li><Link to={"#"} className="btn-link instagram circle"><i className="fa fa-instagram"></i></Link></li>
-									</ul> */}
+
+                {/* Made with Love Section */}
+                <div className="col-lg-6 col-md-6 text-md-right text-center">
+                  <span style={{ fontSize: "14px", fontWeight: "500", color: "#000" }}>
+                    Made with  <span style={{ color: "#e25555" }}>♥</span> by{" "}
+                    <span style={{ color: "#48af53", fontWeight: "bold" }}>Lil Triangle</span>
+                  </span>
                 </div>
               </div>
             </div>

@@ -57,15 +57,6 @@ import masonary44 from './../../images/gallery/gal.jpg';
 import masonary45 from './../../images/gallery/ab.JPG';
 import masonary46 from './../../images/gallery/kkk.JPG';
 
-
-
-
-
-
-
-
-
-
 const galleryBlog = [
   { images: masonary1 },
   { images: masonary2 },
@@ -122,30 +113,33 @@ const masonryOptions = {
 const imagesLoadedOptions = { background: ".my-bg-image-el" };
 
 // 1. STYLE OBJECTS
-// We use these styles to force the standard size and clean layout
+// Updated to include solid purple border and rounded corners
 const cardStyles = {
     imageContainer: {
-        height: '280px', // Set your desired fixed height here
+        height: '280px', 
         width: '100%',
         overflow: 'hidden',
-        position: 'relative'
+        position: 'relative',
+        borderRadius: '16px',        // Rounded corners
+        border: '5px solid #c1d94d', // Solid Purple Line Border
+        boxShadow: '0 5px 15px rgba(0,0,0,0.1)' // Optional shadow for depth
     },
     img: {
         width: '100%',
         height: '100%',
-        objectFit: 'cover', // This creates the "thumbnail" effect without stretching
-        cursor: 'pointer',   // Shows the hand icon indicating it's clickable
+        objectFit: 'cover', 
+        cursor: 'pointer',   
         transition: 'transform 0.3s ease'
     }
 };
 
 // 2. REFACTORED COMPONENT
-// I moved the Image rendering INSIDE this component so we can use the useLightbox hook on the image click
 const GalleryItem = (props) => {
   const { openLightbox } = useLightbox();
   
   return (
-    <div className="dlab-box frame-box m-b30">
+    // Removed 'frame-box' class to ensure no conflicting dotted border styles
+    <div className="dlab-box m-b30">
       <div className="dlab-thum dlab-img-overlay1" style={cardStyles.imageContainer}>
         {/* Clickable Image */}
         <img 
@@ -156,7 +150,7 @@ const GalleryItem = (props) => {
         />
         
         {/* Overlay with Icon */}
-        <div className="overlay-bx">
+        <div className="overlay-bx" style={{ borderRadius: '12px' }}>
           <div className="overlay-icon">
             <Link
               to={"#"}

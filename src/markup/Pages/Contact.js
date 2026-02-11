@@ -7,12 +7,11 @@ import PageTitle from "../Layout/PageTitle";
 const Contact = (props) => {
   const schoolId = "Ihspm6Py6i";
   const enquiryFor = [
-    "Toddlers Program",
     "Daycare",
-    "Nursery",
-    "LKG",
-    "UKG",
-    "Montessori",
+    "Toddlers(Playgroup)",
+    "EY M1",
+    "EY M2",
+    "EY M3",
   ];
   const parents = ["Father", "Mother"];
   const [onSave, setOnSave] = useState(false);
@@ -251,7 +250,7 @@ const Contact = (props) => {
                         fontWeight: "700" 
                       }}
                     >
-                      Whitefield
+                       Borewell Road, Whitefield
                     </h4>
                     <p style={{ fontSize: "14px", color: "white", margin: 0, lineHeight: "1.6", fontWeight: "500" }}>
                       Site No 16, Ashton Park, Borewell Road, Behind Casa Gopalan, Whitefield - 560066

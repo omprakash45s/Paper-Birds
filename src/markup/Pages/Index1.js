@@ -11,7 +11,7 @@ import SpotsCounter from "./SpotsCounter";
 import FloatingEnquiry from "./FloatingEnquiry";
 import InstagramFeed from "../Element/InstagramFeed";
 import SEO from "../../components/SEO";
-import largeimg from "./../../images/blog/large/Curriculum.jpg";
+import largeimg from "./../../images/blog/large/ab.jpeg";
 // import vision from "./../../images/blog/large/v.jpg";
 import {
   OrganizationSchema,
@@ -28,7 +28,7 @@ import call from "./../../images/icon/call.svg";
 import trophy from "./../../images/icon/trophy.svg";
 
 
-import bnr3 from "./../../images/background/bg6.png";
+import bnr3 from "./../../images/background/bgg.png";
 import bgimg3 from "./../../images/line2.png";
 // const SpotsCounter = () => {
 //   // Start at 80, end at 50
@@ -113,18 +113,18 @@ const cardColors = ["#b8d88e", "#ffd27f", "#9ad0f5", "#f7a8b8"];
 const iconBlog2 = [
   {
     icon: <i className="flaticon-rattle text-blue" />,
-    title: "Daycare Services in Whitefield",
-    desc: "Premium daycare services in Borewell Road,Whitefield, Bengaluru. We provide a safe and nurturing environment where children receive supervised care, engage in age-appropriate activities, and socialize with their peers.",
+    title: "Daycare Services in Borewell Road, Whitefield",
+    desc: "Premium daycare services in Borewell Road, Whitefield, Bengaluru. We provide a safe and nurturing environment where children receive supervised care, engage in age-appropriate activities, and socialize with their peers.",
   },
   {
     icon: <i className="flaticon-bricks text-green" />,
     title: "Safe Transport in Bengaluru",
-    desc: "Reliable and safe transport services across Bengaluru, ensuring convenient and secure commuting for our students in Whitefield and surrounding areas.",
+    desc: "Reliable and safe transport services across Bengaluru, ensuring convenient and secure commuting for our students in Borewell Road, Whitefield and surrounding areas.",
   },
   {
     icon: <i className="flaticon-puzzle text-orange" />,
     title: "Hygienic & Nutritious Food",
-    desc: "Enjoy peace of mind knowing that our Whitefield preschool provides hygienic and nutritious meals, ensuring your child's health and well-being with carefully planned menus.",
+    desc: "Enjoy peace of mind knowing that our Borewell Road, Whitefield preschool provides hygienic and nutritious meals, ensuring your child's health and well-being with carefully planned menus.",
   },
   {
     icon: <i className="flaticon-boy text-green" />,
@@ -756,7 +756,7 @@ class Index1 extends Component {
                       fontWeight: "500",
                     }}
                   >
-                    Book a Campus Tour Today!
+                    Book A Visit Today!
                   </p>
                   <a
                     href="tel:+919845127859"
@@ -829,7 +829,7 @@ class Index1 extends Component {
                       </h2>
 
                       <p style={{ textAlign: "justify" }}>
-                        At Paper Bird Shishukul, Whitefield & Indiranagar's trusted Montessori preschool,
+                        At Paper Bird Shishukul, Borewell Road, Whitefield & Indiranagar's trusted Montessori preschool,
                         we are dedicated to providing high-quality holistic education that
                         goes beyond textbooks and classrooms. Our mission is to create a
                         vibrant learning environment where children in Bengaluru can blossom
@@ -842,7 +842,7 @@ class Index1 extends Component {
 
                       <p style={{ textAlign: "justify" }}>
                         Our vision extends beyond the confines of traditional education. As
-                        one of the leading preschools in Whitefield & Indiranagar, we aspire to invoke in
+                        one of the leading preschools in Borewell Road,Whitefield & Indiranagar, we aspire to invoke in
                         our students a genuine love for learning – a love that will accompany
                         them throughout their lives. By instilling a sense of curiosity,
                         resilience, and empathy, we prepare our students to face the
@@ -1066,7 +1066,7 @@ class Index1 extends Component {
                     Gallery
                   </h2>
                   <p>
-                    Take a virtual tour of our beautiful Montessori preschool in
+                    Take a virtual tour of our beautiful Montessori preschool in Borewell Road, 
                     Whitefield and Indiranagar's , Bengaluru
                   </p>
                 </div>
@@ -1088,10 +1088,10 @@ class Index1 extends Component {
                     className="head-title text-secondry"
                     style={{ color: "#48af53" }}
                   >
-                    Our Montessori Certified Teachers
+                    Team Paper Bird Shishukul 
                   </h2>
                   <p style={{ maxWidth: "900px", margin: "0 auto" }}>
-                    Our teachers at Paper Bird Shishukul, Whitefeild & Indiranagar are well
+                    Our teachers at Paper Bird Shishukul, Borewell Road, Whitefield & Indiranagar are well
                     qualified, trained and experienced with college degrees. They
                     have additional degrees in Early Child Education (ECE),
                     Montessori and NTT diploma. Teacher ratio is 12:1. Teacher
@@ -1133,7 +1133,7 @@ function BackgroundBlog2() {
       <div className="container">
         <div className="row">
           <div
-            className="col-lg-12 col-md-12 col-sm-12 col-12  about-text"
+            className="col-lg-12 col-md-12 col-sm-12 col-12 about-text"
             style={{
               visibility: "visible",
               animationDuration: "2s",
@@ -1142,51 +1142,59 @@ function BackgroundBlog2() {
             }}
           >
             <div className="section-head text-center">
+              
+              {/* --- Heading: Full Black --- */}
               <h3 style={{
-                color: "#052c52", // Deep Midnight Blue
+                color: "#000000", 
                 fontWeight: "700",
-                textShadow: "2px 2px 4px rgba(255,255,255,0.8)" // Glow for readability
+                textShadow: "2px 2px 0px rgba(255,255,255,0.6)" // White shadow ensures readability on bg
               }}>
                 Join Our New Session at Borewell Road, Whitefield's Best Preschool
               </h3>
 
+              {/* --- Main Call to Action: Full Black --- */}
               <h2 style={{
-                color: "#052c52",
-                textShadow: "2px 2px 4px rgba(255,255,255,0.8)"
+                color: "#000000",
+                textShadow: "2px 2px 0px rgba(255,255,255,0.6)"
               }}>
                 Call To Enrol Your Child in Whitefield  <br />
+                
+                {/* --- Phone Number: Green --- */}
                 <span style={{
-                  color: "#d32f2f", // Strong Red for emphasis
-                  fontWeight: "800",
+                  color: "#48af53", 
+                  fontWeight: "900",
                   display: "inline-block",
                   marginTop: "5px",
-                  fontSize: "40px"
+                  fontSize: "40px",
+                  textShadow: "2px 2px 0px #ffffff" // White outline to make green pop
                 }}>
                   +91  98451 27859
                 </span>
               </h2>
 
+              {/* --- Address: Full Black --- */}
               <p style={{
-                color: "#052c52",
+                color: "#000000",
                 fontSize: "18px",
                 marginTop: "15px",
-                fontWeight: "600",
-                textShadow: "1px 1px 2px rgba(255,255,255,0.8)"
+                fontWeight: "700",
+                textShadow: "1px 1px 0px rgba(255,255,255,0.6)"
               }}>
                 Visit us at Site No 16, Ashton Park, Borewell Road, Behind Casa Gopalan,
               </p>
 
+              {/* --- Button: Green Background --- */}
               <Link
                 to={"./contact-us"}
                 className="btn btn-md radius-xl"
                 style={{
-                  backgroundColor: "#ff564b", // Vibrant Red-Orange
+                  backgroundColor: "#48af53", // Green Button
                   color: "#ffffff",
-                  border: "none",
+                  border: "2px solid #fff",
                   marginTop: "20px",
                   fontWeight: "700",
                   padding: "15px 35px",
-                  boxShadow: "0 10px 20px rgba(255, 86, 75, 0.4)", // Glowing shadow
+                  boxShadow: "0 10px 20px rgba(72, 175, 83, 0.3)",
                   fontSize: "16px",
                   textTransform: "uppercase",
                   letterSpacing: "1px"

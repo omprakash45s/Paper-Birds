@@ -167,7 +167,7 @@ class TestiMonialSlider extends Component {
   render() {
     var settings = {
       arrows: false,
-      slidesToShow: 3,
+       slidesToShow: 3,
       slidesToScroll: 1,
       infinite: true,
       autoplay: true,
@@ -217,9 +217,10 @@ class TestiMonialSlider extends Component {
         background: #fff;
         padding: 25px;
         border-radius: 15px;
-        /* Default Styles overridden by inline styles for border */
-        height: 100%;
-        min-height: 300px;
+        
+        /* --- CHANGED: Fixed height for standard size --- */
+        height: 350px; 
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;

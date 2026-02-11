@@ -23,7 +23,7 @@ import ls from "./../../images/blog/large/ls.JPG";
 import artt from "./../../images/blog/large/artt.JPG";
 import storyy from "./../../images/blog/large/storyy.png";
 import rhy from "./../../images/blog/large/rhy.png";
-import mu from "./../../images/blog/large/mu.png";
+import mu from "./../../images/blog/large/muu.png";
 import maria from "./../../images/blog/large/maria.JPG";
 
 class ClassDetailContent extends Component {
@@ -36,11 +36,11 @@ class ClassDetailContent extends Component {
 
   render() {
     const scheduleItems = [
-      { icon: prayer, title: "Prayer", bgColor: "#b8d88e", iconBg: "#a5c97b", img: c },
+      { icon: prayer, title: "Prayer", bgColor: "#b8d88e", iconBg: "#a5c97b", img: p },
       { icon: yoga, title: "Yoga", bgColor: "#b8d88e", iconBg: "#a5c97b", img: y },
       { icon: dance, title: "Dance", bgColor: "#b8d88e", iconBg: "#a5c97b", img: d },
 
-      { icon: circle, title: "Circle Time", bgColor: "#ffc570", iconBg: "#ffb347", img: p },
+      { icon: circle, title: "Circle Time", bgColor: "#ffc570", iconBg: "#ffb347", img: c },
       { icon: learning, title: "Concept Learning", bgColor: "#ffc570", iconBg: "#ffb347", img: concept },
       { icon: snacks, title: "Snacks Time", bgColor: "#ffc570", iconBg: "#ffb347", img: snacksimg },
 
