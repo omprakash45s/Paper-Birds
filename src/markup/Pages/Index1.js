@@ -645,7 +645,7 @@ class Index1 extends Component {
                       </div>
 
                       <h2 style={{ color: "#f57c00", fontSize: "28px", fontWeight: "700", marginBottom: "20px" }}>
-                        Whitefield
+                        Borewell Road, <br></br>Whitefield
                       </h2>
 
                       {/* Address */}
@@ -1082,7 +1082,7 @@ class Index1 extends Component {
                 backgroundPosition: "center",
               }}
             >
-              <div className="container">
+              {/* <div className="container">
                 <div className="section-head text-center">
                   <h2
                     className="head-title text-secondry"
@@ -1100,7 +1100,7 @@ class Index1 extends Component {
                   </p>
                 </div>
                 <TeacherSlider />
-              </div>
+              </div> */}
             </div>
             <div className="section-full bg-white content-inner-1">
               <div className="container">

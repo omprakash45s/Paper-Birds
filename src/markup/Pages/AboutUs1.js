@@ -9,6 +9,8 @@ import { SRLWrapper, useLightbox } from "simple-react-lightbox";
 import AccordionBlog from "../Element/AccordionBlog";
 import TestiMonialSlider from "../Element/TestiMonialSlider";
 import VideoPopup from "../Element/VideoPopup";
+import TeacherSlider from "../Element/TeacherSlider";
+
 
 //Images
 import bnr1 from "./../../images/line2.png";
@@ -160,6 +162,14 @@ class AboutUs1 extends Component {
                       >
                         Mrs. Malini Selvarajan (B.Ed & MBA)
                       </h5>
+                      <h6
+                        style={{
+                          color: "#48af53",
+                          fontWeight: "600",
+                          marginBottom: "20px",
+                        }}
+                      >
+Founder & Chairperson                      </h6>
 
                       <div
                         className="text-justify"
@@ -333,6 +343,7 @@ class AboutUs1 extends Component {
                       </div>
                     </div>
                   </div>
+                  
 
                   <div className="col-lg-5 col-md-12 m-b30">
                     <div
@@ -355,6 +366,25 @@ class AboutUs1 extends Component {
                     </div>
                   </div>
                 </div>
+                <div className="container">
+                <div className="section-head text-center">
+                  <h2
+                    className="head-title text-secondry"
+                    style={{ color: "#48af53" }}
+                  >
+                    Team Paper Bird Shishukul 
+                  </h2>
+                  <p style={{ maxWidth: "900px", margin: "0 auto" }}>
+                    Our teachers at Paper Bird Shishukul, Borewell Road, Whitefield & Indiranagar are well
+                    qualified, trained and experienced with college degrees. They
+                    have additional degrees in Early Child Education (ECE),
+                    Montessori and NTT diploma. Teacher ratio is 12:1. Teacher
+                    aides with valuable experience and effective communication
+                    skills support our Bengaluru preschool.
+                  </p>
+                </div>
+                <TeacherSlider />
+              </div>
 
                 {/* --- OUR BRANCHES SECTION --- */}
                 {/* Added marginBottom to separate from footer */}
