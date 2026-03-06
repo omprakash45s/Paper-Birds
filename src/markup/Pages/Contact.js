@@ -14,11 +14,13 @@ const Contact = (props) => {
     "EY M3",
   ];
   const parents = ["Father", "Mother"];
+  const branches = ["Indiranagar", "Borewell Road, Whitefield"];
   const [onSave, setOnSave] = useState(false);
   const [error, setError] = useState(undefined);
   const [responce, setResponce] = useState(undefined);
   const [enquiryForError, setEnquiryForError] = useState(undefined);
   const [relationError, setRelationError] = useState(undefined);
+  const [branchError, setBranchError] = useState(undefined);
 
   const saveEnquiryTolilTriangle = (enqObj) => {
     fetch(
@@ -35,7 +37,7 @@ const Contact = (props) => {
           parentName: enqObj.parentName,
           phone: enqObj.phone,
           email: enqObj.email,
-          notes: enqObj.notes,
+          notes: `Branch: ${enqObj.branch} | Notes: ${enqObj.notes}`,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -72,6 +74,7 @@ const Contact = (props) => {
     document.getElementById("dzName").value = "";
     document.getElementById("dzPhone").value = "";
     document.getElementById("dzEmail").value = "";
+    document.getElementById("dzBranch").value = true;
     document.getElementById("dzAdditionalNote").value = "";
   };
 
@@ -250,7 +253,7 @@ const Contact = (props) => {
                         fontWeight: "700"
                       }}
                     >
-                       Borewell Road, Whitefield
+                      Borewell Road, Whitefield
                     </h4>
                     <p style={{ fontSize: "14px", color: "white", margin: 0, lineHeight: "1.6", fontWeight: "500" }}>
                       Site No 16, Ashton Park, Borewell Road, Behind Casa Gopalan, Whitefield - 560066
@@ -417,10 +420,28 @@ const Contact = (props) => {
                       ) {
                         setRelationError(true);
                       }
+                      if (
+                        !branches.includes(
+                          event.target.elements.dzBranch.value
+                        )
+                      ) {
+                        setBranchError(true);
+                      }
                     } else if (
                       !parents.includes(event.target.elements.dzRelation.value)
                     ) {
                       setRelationError(true);
+                      if (
+                        !branches.includes(
+                          event.target.elements.dzBranch.value
+                        )
+                      ) {
+                        setBranchError(true);
+                      }
+                    } else if (
+                      !branches.includes(event.target.elements.dzBranch.value)
+                    ) {
+                      setBranchError(true);
                     } else {
                       setOnSave(true);
                       let enqObj = {
@@ -430,6 +451,7 @@ const Contact = (props) => {
                         parentName: event.target.elements.dzName.value,
                         phone: event.target.elements.dzPhone.value,
                         email: event.target.elements.dzEmail.value,
+                        branch: event.target.elements.dzBranch.value,
                         notes: event.target.elements.dzAdditionalNote.value,
                       };
                       saveEnquiryTolilTriangle(enqObj);
@@ -438,7 +460,42 @@ const Contact = (props) => {
                   className="dzForm col-md-12"
                 >
                   <div className="row">
-                    <div className="col-md-8 col-sm-8">
+                    <div className="col-md-12 col-sm-12">
+                      <label>Branch</label>
+                      <div className="form-group ">
+                        <select
+                          className="form-control"
+                          required
+                          style={{
+                            width: "100%",
+                            height: "60px",
+                            backgroundColor: "#c4eafb",
+                            border: "0",
+                          }}
+                          name="dzBranch"
+                          id="dzBranch"
+                          onChange={(e) => {
+                            if (branchError) {
+                              setBranchError(false);
+                            }
+                          }}
+                        >
+                          <option disabled selected value>
+                            -- select branch --
+                          </option>
+                          {branches.map((e, k) => (
+                            <option key={k} value={e}>
+                              {e}
+                            </option>
+                          ))}
+                        </select>
+                        {branchError && (
+                          <p className="text-danger">{"Please select a branch "}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-md-6 col-sm-6">
                       <label>Child Name</label>
                       <div className="form-group">
                         <input
@@ -452,7 +509,7 @@ const Contact = (props) => {
                       </div>
                     </div>
 
-                    <div className="col-md-4 col-sm-4">
+                    <div className="col-md-6 col-sm-6">
                       <label>Enquiry For</label>
                       <div className="form-group ">
                         <select
@@ -486,7 +543,7 @@ const Contact = (props) => {
                         )}
                       </div>
                     </div>
-                    <div className="col-md-4 col-sm-4">
+                    <div className="col-md-6 col-sm-6">
                       <label>Parent Details</label>
                       <div className="form-group ">
                         <select
@@ -521,7 +578,7 @@ const Contact = (props) => {
                       </div>
                     </div>
 
-                    <div className="col-md-8 col-sm-8">
+                    <div className="col-md-6 col-sm-6">
                       <label>Name</label>
                       <div className="form-group">
                         <input
@@ -534,6 +591,8 @@ const Contact = (props) => {
                         />
                       </div>
                     </div>
+
+
                     <div className="col-md-6 col-sm-6">
                       <label>Phone Number</label>
                       <div className="form-group">

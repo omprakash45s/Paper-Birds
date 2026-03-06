@@ -11,6 +11,7 @@ const FloatingEnquiryForm = () => {
 
   ];
   const parents = ["Father", "Mother"];
+  const branches = ["Indiranagar", "Borewell Road, Whitefield"];
 
   const [isVisible, setIsVisible] = useState(false);
   const [onSave, setOnSave] = useState(false);
@@ -18,6 +19,7 @@ const FloatingEnquiryForm = () => {
   const [responce, setResponce] = useState(undefined);
   const [enquiryForError, setEnquiryForError] = useState(undefined);
   const [relationError, setRelationError] = useState(undefined);
+  const [branchError, setBranchError] = useState(undefined);
 
   // Show form after page loads
   useEffect(() => {
@@ -41,7 +43,7 @@ const FloatingEnquiryForm = () => {
           parentName: enqObj.parentName,
           phone: enqObj.phone,
           email: enqObj.email,
-          notes: "",
+          notes: `Branch: ${enqObj.branch}`,
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -82,6 +84,7 @@ const FloatingEnquiryForm = () => {
     document.getElementById("floatName").value = "";
     document.getElementById("floatPhone").value = "";
     document.getElementById("floatEmail").value = "";
+    document.getElementById("floatBranch").value = "";
   };
 
   const handleClose = () => {
@@ -340,9 +343,11 @@ const FloatingEnquiryForm = () => {
             event.preventDefault();
             setEnquiryForError(false);
             setRelationError(false);
+            setBranchError(false);
 
             const enquiryForValue = event.target.elements.floatEnquiryFor.value;
             const relationValue = event.target.elements.floatRelation.value;
+            const branchValue = event.target.elements.floatBranch.value;
 
             let hasError = false;
 
@@ -356,6 +361,11 @@ const FloatingEnquiryForm = () => {
               hasError = true;
             }
 
+            if (!branches.includes(branchValue)) {
+              setBranchError(true);
+              hasError = true;
+            }
+
             if (!hasError) {
               setOnSave(true);
               let enqObj = {
@@ -365,6 +375,7 @@ const FloatingEnquiryForm = () => {
                 parentName: event.target.elements.floatName.value,
                 phone: event.target.elements.floatPhone.value,
                 email: event.target.elements.floatEmail.value,
+                branch: branchValue,
               };
               saveEnquiryTolilTriangle(enqObj);
             }
@@ -463,6 +474,29 @@ const FloatingEnquiryForm = () => {
                 style={styles.input}
                 placeholder="Email Address"
               />
+            </div>
+          </div>
+
+          <div style={{ ...styles.grid, gridTemplateColumns: '1fr' }}>
+            <div style={styles.formGroup}>
+              <select
+                className="floating-enquiry-select"
+                required
+                style={styles.select}
+                name="floatBranch"
+                id="floatBranch"
+                onChange={() => {
+                  if (branchError) setBranchError(false);
+                }}
+              >
+                <option value="" disabled selected>-- Select Branch --</option>
+                {branches.map((b, k) => (
+                  <option key={k} value={b}>{b}</option>
+                ))}
+              </select>
+              {branchError && (
+                <p style={styles.errorText}>Please select a branch</p>
+              )}
             </div>
           </div>
 
